@@ -3,320 +3,277 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pre-Interview Intelligence Dossier: Tukaram Mundhe (IAS) | Prepared for Figuring Out</title>
+    <title>Tukaram Mundhe (IAS) — The Ground Reality | Figuring Out Brief</title>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg: #0B0F17;
+            --bg: #090D14;
             --surface: #111827;
-            --surface-accent: #1F2937;
-            --border: #374151;
-            --text-main: #F9FAFB;
-            --text-muted: #9CA3AF;
+            --surface-hover: #1F2937;
+            --border: #2D3748;
+            --text: #F3F4F6;
+            --muted: #9CA3AF;
             --primary: #3B82F6;
-            --accent: #10B981;
-            --highlight: #F59E0B;
+            --accent: #E11D48;
+            --amber: #F59E0B;
+            --green: #10B981;
         }
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
+        * { box-sizing: border-box; margin: 0; padding: 0; }
         body {
             background-color: var(--bg);
-            color: var(--text-main);
+            color: var(--text);
             font-family: 'Plus Jakarta Sans', sans-serif;
-            line-height: 1.65;
-            padding: 40px 20px;
+            line-height: 1.7;
+            padding: 36px 18px;
         }
 
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-        }
+        .container { max-width: 860px; margin: 0 auto; }
 
-        .badge {
+        .tag {
             display: inline-block;
-            background: rgba(59, 130, 246, 0.15);
-            color: var(--primary);
-            border: 1px solid rgba(59, 130, 246, 0.3);
+            background: rgba(225, 29, 72, 0.15);
+            color: #FB7185;
+            border: 1px solid rgba(225, 29, 72, 0.3);
             padding: 4px 12px;
             border-radius: 999px;
-            font-size: 0.75rem;
+            font-size: 0.72rem;
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 1px;
-            margin-bottom: 12px;
+            margin-bottom: 14px;
         }
 
-        .header-card {
+        .hero-card {
             background: var(--surface);
             border: 1px solid var(--border);
-            border-radius: 12px;
+            border-radius: 14px;
             padding: 32px;
             margin-bottom: 28px;
             position: relative;
-            overflow: hidden;
         }
 
-        .header-card::before {
+        .hero-card::before {
             content: "";
             position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: linear-gradient(90deg, #3B82F6, #10B981);
+            top: 0; left: 0; right: 0; height: 4px;
+            background: linear-gradient(90deg, #E11D48, #3B82F6);
         }
 
-        h1 {
-            font-size: 2.2rem;
-            font-weight: 800;
-            letter-spacing: -0.8px;
-            margin-bottom: 8px;
-        }
+        h1 { font-size: 2.1rem; font-weight: 800; letter-spacing: -0.6px; margin-bottom: 8px; line-height: 1.25; }
+        .subhead { color: var(--muted); font-size: 1rem; margin-bottom: 24px; }
 
-        .subtitle {
-            color: var(--text-muted);
-            font-size: 1rem;
-            margin-bottom: 20px;
-        }
-
-        .meta-grid {
+        .stat-strip {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 16px;
-            margin-top: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+            gap: 14px;
             border-top: 1px solid var(--border);
             padding-top: 20px;
         }
 
-        .meta-item .label {
-            font-size: 0.75rem;
-            color: var(--text-muted);
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
+        .stat-box { background: rgba(255,255,255,0.02); padding: 12px; border-radius: 8px; }
+        .stat-label { font-size: 0.72rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; }
+        .stat-val { font-size: 0.95rem; font-weight: 700; color: #FFF; margin-top: 3px; }
 
-        .meta-item .val {
-            font-size: 0.95rem;
-            font-weight: 600;
-            color: var(--text-main);
-            margin-top: 2px;
-        }
-
-        .section-card {
+        .card {
             background: var(--surface);
             border: 1px solid var(--border);
             border-radius: 12px;
-            padding: 28px;
-            margin-bottom: 24px;
+            padding: 26px;
+            margin-bottom: 22px;
         }
 
-        .section-title {
-            font-size: 1.25rem;
+        .card-heading {
+            font-size: 1.15rem;
             font-weight: 700;
             margin-bottom: 16px;
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 8px;
             border-bottom: 1px solid var(--border);
-            padding-bottom: 12px;
+            padding-bottom: 10px;
         }
 
-        .playbook-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 16px;
+        .story-block {
+            background: var(--surface-hover);
+            border-left: 3px solid var(--primary);
+            padding: 16px 18px;
+            border-radius: 0 8px 8px 0;
+            margin-bottom: 14px;
         }
 
-        @media (max-width: 768px) {
-            .playbook-grid { grid-template-columns: 1fr; }
-        }
+        .story-title { font-weight: 700; color: #FFF; font-size: 0.95rem; margin-bottom: 4px; }
+        .story-desc { color: var(--muted); font-size: 0.88rem; line-height: 1.6; }
 
-        .playbook-item {
-            background: var(--surface-accent);
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            padding: 16px;
+        .question-item {
+            margin-bottom: 18px;
+            padding-bottom: 14px;
+            border-bottom: 1px dashed var(--border);
         }
+        .question-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
 
-        .playbook-item h4 {
-            color: var(--primary);
-            font-size: 0.95rem;
-            margin-bottom: 6px;
-        }
-
-        .playbook-item p {
-            font-size: 0.85rem;
-            color: var(--text-muted);
-        }
-
-        .timeline-item {
-            border-left: 2px solid var(--primary);
-            padding-left: 18px;
-            margin-bottom: 20px;
-            position: relative;
-        }
-
-        .timeline-item::before {
-            content: "";
-            position: absolute;
-            left: -6px;
-            top: 4px;
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            background: var(--primary);
-        }
-
-        .timeline-item .act-title {
+        .q-tag {
+            font-size: 0.72rem;
             font-weight: 700;
-            font-size: 1rem;
-            color: var(--text-main);
+            color: var(--amber);
+            text-transform: uppercase;
+            margin-bottom: 4px;
+        }
+        .q-text {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #FFF;
+            margin-bottom: 4px;
+        }
+        .q-sub {
+            font-size: 0.83rem;
+            color: var(--muted);
         }
 
-        .timeline-item .act-desc {
-            font-size: 0.88rem;
-            color: var(--text-muted);
-            margin-top: 4px;
-        }
-
-        .code-box {
-            background: #000000;
+        .hook-box {
+            background: #000;
             border: 1px solid var(--border);
             border-radius: 8px;
             padding: 16px;
+            margin-bottom: 14px;
             font-family: 'JetBrains Mono', monospace;
-            font-size: 0.82rem;
-            color: #D1D5DB;
-            margin-top: 10px;
+            font-size: 0.84rem;
             line-height: 1.6;
+            color: #D1D5DB;
         }
 
-        .footer-note {
+        .footer {
             text-align: center;
-            color: var(--text-muted);
-            font-size: 0.85rem;
-            margin-top: 40px;
+            color: var(--muted);
+            font-size: 0.8rem;
+            margin-top: 36px;
             border-top: 1px solid var(--border);
-            padding-top: 20px;
+            padding-top: 18px;
         }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <div class="header-card">
-        <span class="badge">Figuring Out Pre-Production Briefing</span>
+    <div class="hero-card">
+        <span class="tag">Figuring Out • Pre-Interview Dossier</span>
         <h1>Tukaram Mundhe (IAS)</h1>
-        <p class="subtitle">Operational Blueprint, Administrative Reforms, and Uncensored Interview Architecture</p>
+        <p class="subhead">From selling vegetables in Beed to 25+ transfers: The unvarnished reality of Indian governance.</p>
+
+        <div class="stat-strip">
+            <div class="stat-box">
+                <div class="stat-label">Hometown</div>
+                <div class="stat-val">Tadsonna (Beed, MH)</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-label">UPSC Rank</div>
+                <div class="stat-val">AIR 20 (2005 Batch)</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-label">Transfers Faced</div>
+                <div class="stat-val">25+ in ~20 Years</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-label">Core Theme</div>
+                <div class="stat-val">Systemic Friction vs Execution</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SECTION 1: THE REAL BACKGROUND -->
+    <div class="card">
+        <div class="card-heading">🌱 1. The Early Life: Hardship & Humble Beginnings</div>
         
-        <div class="meta-grid">
-            <div class="meta-item">
-                <div class="label">Primary Persona</div>
-                <div class="val">Senior IAS Officer (2005 Batch)</div>
+        <div class="story-block">
+            <div class="story-title">The Weekly Market Hustle (Tadsonna Village, Beed)</div>
+            <div class="story-desc">
+                Born into a farming household in drought-prone Beed. Before walking to his Marathi-medium Zilla Parishad school, he helped water crops during late-night power slots and sold farm vegetables in weekly local markets.
             </div>
-            <div class="meta-item">
-                <div class="label">Editorial Angle</div>
-                <div class="val">Systems & Administrative Execution</div>
-            </div>
-            <div class="meta-item">
-                <div class="label">Target Duration</div>
-                <div class="val">90 – 110 Minutes</div>
-            </div>
-            <div class="meta-item">
-                <div class="label">Prepared By</div>
-                <div class="val">Shraddha Jamdade</div>
+        </div>
+
+        <div class="story-block">
+            <div class="story-title">Failing 3 Times Before AIR 20</div>
+            <div class="story-desc">
+                Studied in Aurangabad (BAMU) while managing strict financial constraints. Failed Prelims in his 1st attempt, failed Mains in his 2nd, reached the interview in his 3rd, and finally secured All India Rank 20 on his 4th attempt.
             </div>
         </div>
     </div>
 
-    <!-- SECTION 1: THE CORE THESIS -->
-    <div class="section-card">
-        <div class="section-title">📌 1. The Editorial Thesis & Audience Friction</div>
-        <p style="color: #D1D5DB; font-size: 0.95rem; margin-bottom: 12px;">
-            <b>The Mainstream Trap:</b> Most media platforms reduce Tukaram Mundhe to a sensationalized headline about surviving 15+ political transfers.
-        </p>
-        <p style="color: #9CA3AF; font-size: 0.9rem;">
-            <b>The Figuring Out Opportunity:</b> Deconstruct the <i>mechanics of Indian governance</i>. Why is executing basic civic systems (roads, public hospitals, clean water, transport) so difficult? This conversation breaks down how public administration actually functions behind closed doors.
-        </p>
-    </div>
+    <!-- SECTION 2: THE GROUND BATTLES -->
+    <div class="card">
+        <div class="card-heading">⚡ 2. The Battles Most People Only Read Headlines About</div>
 
-    <!-- SECTION 2: OPERATIONAL PLAYBOOKS -->
-    <div class="section-card">
-        <div class="section-title">⚙️ 2. The Unreported Operational Playbooks</div>
-        <div class="playbook-grid">
-            <div class="playbook-item">
-                <h4>1. Revenue & Water Leakage (NMMC)</h4>
-                <p>Audited municipal water distribution networks and cut thousands of illegal commercial connections, turning Navi Mumbai Municipal Corporation's balance sheet cash-flow positive.</p>
+        <div class="story-block" style="border-left-color: #E11D48;">
+            <div class="story-title">Solapur & The Liquor/Sand Mafia (2008–2010)</div>
+            <div class="story-desc">
+                Cracked down on unregistered sand extraction on dry riverbeds and unlicensed liquor breweries. Faced open intimidation and administrative pushback.
             </div>
-            <div class="playbook-item">
-                <h4>2. Transit System Optimization (PMPML)</h4>
-                <p>Audited contractor fleet billing in Pune, standardized scheduled bus routes, and reduced operational dead mileage by over 20% in months.</p>
+        </div>
+
+        <div class="story-block" style="border-left-color: #F59E0B;">
+            <div class="story-title">Navi Mumbai: 105 Corporators vs. 1 IAS Officer (2016)</div>
+            <div class="story-desc">
+                Cut illegal commercial water connections and audited property taxes. 105 out of 111 corporators passed a No-Confidence Motion to expel him. Citizens took to the streets to stop his transfer.
             </div>
-            <div class="playbook-item">
-                <h4>3. Direct Grievance Redressal (Walk with Commissioner)</h4>
-                <p>Instituted direct weekly citizen open-houses in Nagpur and Navi Mumbai, bypassing bureaucratic middle-tiers to resolve civic issues on the spot.</p>
-            </div>
-            <div class="playbook-item">
-                <h4>4. Primary Health Accountability (NHM)</h4>
-                <p>Implemented biometric attendance and strict supply-chain audits across rural Primary Health Centres (PHCs) to ensure medical staff presence.</p>
+        </div>
+
+        <div class="story-block" style="border-left-color: #10B981;">
+            <div class="story-title">FDA Crackdown: What are Indians Eating? (Recent)</div>
+            <div class="story-desc">
+                Raid drives against adulterated food products, fake paneer (analog cheese), and counterfeit drugs.
             </div>
         </div>
     </div>
 
-    <!-- SECTION 3: 90-MINUTE EPISODE ARC -->
-    <div class="section-card">
-        <div class="section-title">🎙️ 3. The 90-Minute Episode Narrative Arc</div>
-        
-        <div class="timeline-item">
-            <div class="act-title">Act I: The UPSC Illusion vs. The First District Posting (00:00 - 25:00)</div>
-            <div class="act-desc">
-                • "What is the single biggest psychological disconnect between clearing UPSC and your first day inside a real collectorate?"<br>
-                • Deconstructing the power dynamics between elected representatives, local contractors, and permanent civil servants.
-            </div>
+    <!-- SECTION 3: RAJ'S EPISODE QUESTION ARC -->
+    <div class="card">
+        <div class="card-heading">🎙️ 3. The Unfiltered Question Arc (In Raj's Direct Style)</div>
+
+        <div class="question-item">
+            <div class="q-tag">Childhood & Hunger</div>
+            <div class="q-text">"You used to sell vegetables in the village market before school. When you had no money and no English-medium background, did you honestly believe you could crack UPSC with AIR 20?"</div>
+            <div class="q-sub">Goal: Break the myth of elite UPSC privilege; connect with tier-2/3 Indian youth.</div>
         </div>
 
-        <div class="timeline-item">
-            <div class="act-title">Act II: The Economics of Municipal Corruption (25:00 - 60:00)</div>
-            <div class="act-desc">
-                • "How does civic revenue actually leak? Where is money lost in road tenders and water supplies?"<br>
-                • The tactical playbook used to audit and recover missing municipal funds in Solapur and Navi Mumbai.
-            </div>
+        <div class="question-item">
+            <div class="q-tag">The Personal Cost of Integrity</div>
+            <div class="q-text">"People make memes about your 25 transfers. But practically—how do you look at your family and tell them to pack their bags every 9 months because you refused to compromise?"</div>
+            <div class="q-sub">Goal: Get past the stoic officer persona to the real emotional and family cost.</div>
         </div>
 
-        <div class="timeline-item">
-            <div class="act-title">Act III: The Human Cost of Uncompromising Execution (60:00 - 90:00)</div>
-            <div class="act-desc">
-                • "When you know an order will trigger an immediate transfer within 48 hours, what is the internal decision calculus to sign it anyway?"<br>
-                • The personal and psychological toll of frequent relocations on family life and mental endurance.
-            </div>
-        </div>
-    </div>
-
-    <!-- SECTION 4: VIRAL HOOKS -->
-    <div class="section-card">
-        <div class="section-title">🎬 4. Ready-to-Record Short-Form Hooks (Reels / Shorts)</div>
-        
-        <div class="code-box">
-[HOOK 1 - 0:00 to 0:04]
-Visual: Tight crop on Raj leaning forward.
-Audio: "Why do Indian roads break within six months of being built?"
-Mundhe Voiceover: "Because road tenders are not designed for longevity; they are structured for recurring repair budgets..."
+        <div class="question-item">
+            <div class="q-tag">Where Does Public Money Actually Go?</div>
+            <div class="q-text">"Why do Indian roads break every single monsoon? Is it bad engineers, corrupt contractors, or are tenders designed to fail so people can eat repair budgets?"</div>
+            <div class="q-sub">Goal: Demystify the practical mechanics of civic budgets in plain Hindi.</div>
         </div>
 
-        <div class="code-box">
-[HOOK 2 - 0:00 to 0:04]
-Visual: High-contrast split screen showing transfer headlines.
-Audio: "15 transfers in 18 years is not a badge of honor. It is an audit of systemic friction."
+        <div class="question-item">
+            <div class="q-tag">The Food Adulteration Reality</div>
+            <div class="q-text">"During your FDA inspections, what is the scariest thing you caught in the food and medicines everyday Indians consume?"</div>
+            <div class="q-sub">Goal: High-friction, viral topic that affects every listener directly.</div>
         </div>
     </div>
 
-    <div class="footer-note">
-        Prepared exclusively as an operational production sample for the Figuring Out media & research team.
+    <!-- SECTION 4: SHORT-FORM REEL SCRIPTS -->
+    <div class="card">
+        <div class="card-heading">🎬 4. Ready-to-Record Short-Form Hooks (For Editors)</div>
+
+        <div class="hook-box">
+[HOOK 1 - The 105 vs 1 Moment]
+Visual: Raj leaning in with intense expression.
+Raj: "When 105 politicians united to kick you out of Navi Mumbai, were you ever afraid for your life?"
+Mundhe: "If you work for the chair, you stay afraid. If you work for the Constitution, you sleep peacefully."
+        </div>
+
+        <div class="hook-box">
+[HOOK 2 - The Road Repair Truth]
+Raj: "Why does our infrastructure look unfinished even after paying high taxes?"
+Mundhe: "Because road contracts are rarely designed for longevity. They are designed for recurring maintenance budgets."
+        </div>
+    </div>
+
+    <div class="footer">
+        Researched & Built by Shraddha Jamdade | Prepared for Figuring Out Media Team
     </div>
 </div>
 
