@@ -1,369 +1,911 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tukaram Mundhe (IAS) — Comprehensive Pre-Production Brief | Figuring Out</title>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --bg: #090D14;
-            --surface: #111827;
-            --surface-hover: #1F2937;
-            --border: #2D3748;
-            --text-main: #F3F4F6;
-            --text-muted: #9CA3AF;
-            --primary: #3B82F6;
-            --accent: #E11D48;
-            --amber: #F59E0B;
-            --green: #10B981;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Uncompromising Civil Servant — Tukaram Mundhe (IAS)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ============ TOKENS ============ */
+:root{
+  --ink:#0B0E14;
+  --ink-2:#10141D;
+  --ink-3:#161C28;
+  --ink-4:#1B2230;
+  --cream:#F3F4F6;
+  --cream-dim:#9AA1AF;
+  --cream-faint:#6B7280;
+  --slate:#1F2937;
+  --slate-line:#26303F;
+  --crimson:#E11D48;
+  --crimson-dim:rgba(225,29,72,0.14);
+  --emerald:#10B981;
+  --emerald-dim:rgba(16,185,129,0.14);
+  --amber:#F59E0B;
+  --amber-dim:rgba(245,158,11,0.14);
+  --serif:'Newsreader','Playfair Display',Georgia,serif;
+  --sans:'Plus Jakarta Sans','Inter',-apple-system,sans-serif;
+  --mono:'JetBrains Mono','Courier New',monospace;
+  --max:1180px;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+@media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto;} *{animation-duration:0.01ms !important; transition-duration:0.01ms !important;} }
+body{
+  margin:0; background:var(--ink); color:var(--cream);
+  font-family:var(--sans); font-size:16px; line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+body::before{
+  content:""; position:fixed; inset:0; pointer-events:none; z-index:0; opacity:0.5;
+  background-image:
+    radial-gradient(ellipse 900px 500px at 15% -5%, rgba(245,158,11,0.05), transparent 60%),
+    radial-gradient(ellipse 700px 600px at 100% 20%, rgba(225,29,72,0.05), transparent 55%);
+}
+a{color:inherit;}
+h1,h2,h3,h4{font-family:var(--serif); font-weight:600; margin:0; letter-spacing:-0.01em;}
+p{margin:0 0 1em 0;}
+.mono{font-family:var(--mono);}
+:focus-visible{ outline:2px solid var(--amber); outline-offset:3px; border-radius:2px; }
+.visually-hidden{position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0,0,0,0);}
 
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body {
-            background-color: var(--bg);
-            color: var(--text-main);
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            line-height: 1.7;
-            padding: 40px 18px;
-        }
+/* ============ PROGRESS BAR ============ */
+.progress-track{ position:fixed; top:0; left:0; right:0; height:3px; background:var(--slate); z-index:200; }
+.progress-fill{ height:100%; width:0%; background:linear-gradient(90deg,var(--amber),var(--crimson)); transition:width 0.1s linear; }
 
-        .container { max-width: 900px; margin: 0 auto; }
+/* ============ TOPBAR ============ */
+.topbar{
+  position:sticky; top:3px; z-index:190; background:rgba(11,14,20,0.88); backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--slate-line);
+  display:flex; align-items:center; justify-content:space-between;
+  padding:14px 24px;
+}
+.topbar-brand{ display:flex; align-items:center; gap:10px; font-family:var(--mono); font-size:12px; letter-spacing:0.08em; color:var(--cream-dim); text-transform:uppercase; }
+.topbar-brand .dot{ width:7px; height:7px; border-radius:50%; background:var(--crimson); box-shadow:0 0 0 3px var(--crimson-dim); flex-shrink:0; }
+.topbar-actions{ display:flex; align-items:center; gap:8px; }
+.btn-chip{
+  font-family:var(--mono); font-size:11.5px; text-transform:uppercase; letter-spacing:0.05em;
+  background:var(--ink-3); border:1px solid var(--slate-line); color:var(--cream-dim);
+  padding:8px 12px; border-radius:6px; cursor:pointer; white-space:nowrap;
+}
+.btn-chip:hover{ color:var(--cream); border-color:var(--cream-faint); }
+.btn-chip.active{ color:var(--ink); background:var(--amber); border-color:var(--amber); }
+.nav-toggle{ display:none; }
 
-        .badge {
-            display: inline-block;
-            background: rgba(59, 130, 246, 0.15);
-            color: #60A5FA;
-            border: 1px solid rgba(59, 130, 246, 0.3);
-            padding: 4px 14px;
-            border-radius: 999px;
-            font-size: 0.75rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 14px;
-        }
+/* ============ SHELL ============ */
+.shell{ display:grid; grid-template-columns:230px 1fr; max-width:1440px; margin:0 auto; position:relative; z-index:1; }
+.chapter-nav{
+  position:sticky; top:60px; align-self:start; height:calc(100vh - 60px);
+  padding:36px 8px 36px 24px; overflow-y:auto;
+}
+.chapter-nav ol{ list-style:none; margin:0; padding:0; border-left:1px solid var(--slate-line); }
+.chapter-nav a{
+  display:block; text-decoration:none; color:var(--cream-faint); font-size:13px;
+  padding:9px 0 9px 16px; border-left:2px solid transparent; margin-left:-1px;
+  transition:color .15s;
+}
+.chapter-nav a .num{ font-family:var(--mono); font-size:10.5px; color:var(--cream-faint); margin-right:8px; }
+.chapter-nav a:hover{ color:var(--cream); }
+.chapter-nav a.active{ color:var(--amber); border-left-color:var(--amber); }
+.chapter-nav a.active .num{ color:var(--amber); }
 
-        .hero-card {
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: 14px;
-            padding: 34px;
-            margin-bottom: 26px;
-            position: relative;
-        }
+main{ min-width:0; }
+.section{ padding:76px 40px; border-bottom:1px solid var(--slate-line); }
+.section-inner{ max-width:var(--max); margin:0 auto; }
+.eyebrow{
+  font-family:var(--mono); font-size:12px; text-transform:uppercase; letter-spacing:0.14em;
+  color:var(--amber); display:flex; align-items:center; gap:10px; margin-bottom:18px;
+}
+.eyebrow::before{ content:""; width:22px; height:1px; background:var(--amber); }
+.section h2{ font-size:clamp(28px,3.4vw,42px); max-width:820px; margin-bottom:16px; }
+.section-lede{ color:var(--cream-dim); max-width:640px; font-size:16.5px; }
 
-        .hero-card::before {
-            content: "";
-            position: absolute;
-            top: 0; left: 0; right: 0; height: 4px;
-            background: linear-gradient(90deg, #3B82F6, #10B981);
-        }
+/* ============ HERO ============ */
+.hero{ padding-top:56px; border-bottom:1px solid var(--slate-line); }
+.hero-grid{ display:grid; grid-template-columns:1.5fr 1fr; gap:56px; align-items:start; }
+.hero-eyebrow{ font-family:var(--mono); font-size:12.5px; letter-spacing:0.14em; text-transform:uppercase; color:var(--crimson); margin-bottom:22px; }
+.hero h1{ font-size:clamp(38px,5.2vw,68px); line-height:1.04; margin-bottom:26px; }
+.hero h1 em{ font-style:italic; color:var(--amber); }
+.hero-sub{ font-size:18px; color:var(--cream-dim); max-width:540px; margin-bottom:0; line-height:1.65; }
+.hero-scrollcue{ margin-top:40px; font-family:var(--mono); font-size:11.5px; color:var(--cream-faint); display:flex; align-items:center; gap:8px; text-transform:uppercase; letter-spacing:0.08em; }
 
-        h1 { font-size: 2.2rem; font-weight: 800; letter-spacing: -0.6px; margin-bottom: 8px; }
-        .subhead { color: var(--text-muted); font-size: 1rem; margin-bottom: 24px; }
+/* service card (asymmetry counterweight) */
+.svc-card{
+  background:var(--ink-2); border:1px solid var(--slate-line); border-radius:10px; padding:26px;
+  position:relative; overflow:hidden;
+}
+.svc-card::after{ content:"FILE"; position:absolute; top:14px; right:-30px; transform:rotate(45deg);
+  background:var(--crimson); color:var(--cream); font-family:var(--mono); font-size:10px; letter-spacing:0.12em;
+  padding:3px 36px; font-weight:700; }
+.svc-title{ font-family:var(--mono); font-size:11px; text-transform:uppercase; letter-spacing:0.1em; color:var(--cream-faint); margin-bottom:4px; }
+.svc-name{ font-family:var(--serif); font-size:22px; margin-bottom:2px; }
+.svc-role{ font-size:13.5px; color:var(--amber); margin-bottom:20px; }
+.svc-row{ display:flex; justify-content:space-between; padding:9px 0; border-top:1px dashed var(--slate-line); font-size:13px; }
+.svc-row:last-of-type{ border-bottom:1px dashed var(--slate-line); }
+.svc-row span:first-child{ color:var(--cream-faint); }
+.svc-row span:last-child{ font-family:var(--mono); text-align:right; }
+.svc-note{ margin-top:16px; font-size:11.5px; color:var(--cream-faint); line-height:1.5; }
 
-        .stat-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 12px;
-            border-top: 1px solid var(--border);
-            padding-top: 20px;
-        }
+/* ============ METRIC RIBBON ============ */
+.ribbon{ padding:26px 40px; border-bottom:1px solid var(--slate-line); overflow-x:auto; background:var(--ink-2); }
+.ribbon-inner{ display:flex; gap:14px; max-width:var(--max); margin:0 auto; min-width:min-content; }
+.chip{
+  flex:0 0 auto; background:var(--ink-3); border:1px solid var(--slate-line); border-radius:8px;
+  padding:14px 18px; min-width:168px; border-left:3px solid var(--amber);
+}
+.chip.c-crimson{ border-left-color:var(--crimson); }
+.chip.c-emerald{ border-left-color:var(--emerald); }
+.chip-label{ font-family:var(--mono); font-size:10.5px; text-transform:uppercase; letter-spacing:0.08em; color:var(--cream-faint); margin-bottom:6px; }
+.chip-value{ font-size:16px; font-weight:600; font-family:var(--sans); }
+.chip-sub{ font-size:11.5px; color:var(--cream-faint); margin-top:3px; }
 
-        .stat-box { background: rgba(255,255,255,0.02); padding: 12px 14px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.04); }
-        .stat-label { font-size: 0.72rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; }
-        .stat-val { font-size: 0.95rem; font-weight: 700; color: #FFF; margin-top: 2px; }
+/* ============ TIMELINE (signature: transfer-order ledger) ============ */
+.ledger{ margin-top:48px; position:relative; }
+.ledger::before{ content:""; position:absolute; left:15px; top:0; bottom:0; width:1px; background:var(--slate-line); }
+.ledger-item{ position:relative; padding-left:52px; margin-bottom:22px; }
+.ledger-dot{ position:absolute; left:8px; top:28px; width:15px; height:15px; border-radius:50%; background:var(--ink); border:2px solid var(--amber); z-index:2; }
+.ledger-item.status-crimson .ledger-dot{ border-color:var(--crimson); }
+.ledger-item.status-emerald .ledger-dot{ border-color:var(--emerald); }
+.order-slip{
+  background:var(--ink-2); border:1px solid var(--slate-line); border-radius:10px; overflow:hidden;
+}
+.order-head{
+  display:flex; justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap;
+  padding:12px 20px; background:var(--ink-3);
+  background-image:radial-gradient(circle, var(--slate-line) 1.3px, transparent 1.3px);
+  background-size:11px 11px; background-position:bottom;
+  border-bottom:1px solid var(--slate-line);
+}
+.order-head-l{ display:flex; align-items:center; gap:12px; }
+.order-no{ font-family:var(--mono); font-size:11px; color:var(--cream-faint); letter-spacing:0.04em; }
+.order-period{ font-family:var(--mono); font-size:13px; color:var(--amber); font-weight:600; }
+.stamp{
+  font-family:var(--mono); font-size:10px; letter-spacing:0.09em; text-transform:uppercase; font-weight:700;
+  padding:4px 10px; border-radius:20px; border:1.5px solid currentColor; transform:rotate(-2deg);
+}
+.stamp.st-emerald{ color:var(--emerald); }
+.stamp.st-crimson{ color:var(--crimson); }
+.stamp.st-amber{ color:var(--amber); }
+.order-body{ padding:20px 22px 22px; }
+.order-body h3{ font-size:20px; margin-bottom:10px; }
+.order-body p{ color:var(--cream-dim); font-size:14.8px; margin-bottom:10px; }
+.order-body p:last-child{ margin-bottom:0; }
+.ledger-item button.expand{
+  background:none; border:none; color:var(--cream-faint); font-family:var(--mono); font-size:11px;
+  text-transform:uppercase; letter-spacing:0.06em; cursor:pointer; padding:0; margin-top:6px;
+  display:flex; align-items:center; gap:6px;
+}
+.ledger-item button.expand:hover{ color:var(--amber); }
+.order-detail{ display:none; }
+.order-detail.open{ display:block; }
+.chev{ transition:transform .2s; display:inline-block; }
+.order-detail.open + button .chev, button.expand[aria-expanded="true"] .chev{ transform:rotate(180deg); }
 
-        .card {
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 28px;
-            margin-bottom: 24px;
-        }
+/* ============ BY THE NUMBERS ============ */
+.numbers-grid{ display:grid; grid-template-columns:1fr 1fr; gap:40px; margin-top:40px; align-items:start; }
+.tally{ display:flex; flex-direction:column; gap:10px; }
+.tally-row{ display:grid; grid-template-columns:52px 1fr auto; align-items:center; gap:12px; }
+.tally-num{ font-family:var(--serif); font-size:26px; color:var(--amber); text-align:right; }
+.tally-bar-track{ background:var(--slate); border-radius:4px; height:10px; overflow:hidden; }
+.tally-bar-fill{ height:100%; background:linear-gradient(90deg,var(--emerald),var(--amber)); border-radius:4px; }
+.tally-meta{ font-family:var(--mono); font-size:11px; color:var(--cream-faint); text-align:right; white-space:nowrap; }
+.numbers-note{ background:var(--ink-2); border:1px solid var(--slate-line); border-left:3px solid var(--crimson); border-radius:8px; padding:20px 22px; font-size:14.5px; color:var(--cream-dim); }
+.numbers-note strong{ color:var(--cream); }
 
-        .card-heading {
-            font-size: 1.18rem;
-            font-weight: 700;
-            margin-bottom: 16px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            border-bottom: 1px solid var(--border);
-            padding-bottom: 12px;
-            color: #FFF;
-        }
+/* ============ MAP ============ */
+.map-wrap{ display:grid; grid-template-columns:1fr 340px; gap:32px; margin-top:40px; align-items:start; }
+.map-svg-box{ background:var(--ink-2); border:1px solid var(--slate-line); border-radius:12px; padding:18px; }
+.map-svg-box svg{ width:100%; height:auto; display:block; }
+.city-dot{ cursor:pointer; }
+.city-dot circle{ transition:r .15s, fill .15s; }
+.city-dot:hover circle, .city-dot.active circle{ fill:var(--amber); }
+.city-dot text{ font-family:var(--mono); font-size:9px; fill:var(--cream-dim); pointer-events:none; }
+.map-caption{ font-family:var(--mono); font-size:10.5px; color:var(--cream-faint); margin-top:10px; text-align:center; }
+.map-detail{ background:var(--ink-2); border:1px solid var(--slate-line); border-radius:10px; padding:22px; min-height:220px; }
+.map-detail h4{ font-size:18px; margin-bottom:4px; }
+.map-detail .role{ color:var(--amber); font-size:13px; margin-bottom:12px; }
+.map-detail p{ font-size:13.8px; color:var(--cream-dim); }
+.map-hint{ color:var(--cream-faint); font-size:13.5px; }
 
-        .story-block {
-            background: var(--surface-hover);
-            border-left: 4px solid var(--primary);
-            padding: 16px 20px;
-            border-radius: 0 8px 8px 0;
-            margin-bottom: 14px;
-        }
+/* ============ QUESTIONS ============ */
+.qbar{ display:flex; gap:12px; flex-wrap:wrap; align-items:center; margin:36px 0 24px; }
+.qsearch{ flex:1 1 260px; position:relative; }
+.qsearch input{
+  width:100%; background:var(--ink-2); border:1px solid var(--slate-line); border-radius:8px;
+  padding:12px 14px 12px 38px; color:var(--cream); font-family:var(--sans); font-size:14.5px;
+}
+.qsearch input::placeholder{ color:var(--cream-faint); }
+.qsearch svg{ position:absolute; left:12px; top:50%; transform:translateY(-50%); width:16px; height:16px; stroke:var(--cream-faint); }
+.tagfilter{ display:flex; gap:8px; flex-wrap:wrap; }
+.tag-btn{
+  font-family:var(--mono); font-size:11px; text-transform:uppercase; letter-spacing:0.05em;
+  background:var(--ink-2); border:1px solid var(--slate-line); color:var(--cream-dim);
+  padding:9px 13px; border-radius:20px; cursor:pointer;
+}
+.tag-btn[data-tag="Personal"].active{ background:var(--amber-dim); border-color:var(--amber); color:var(--amber); }
+.tag-btn[data-tag="Mindset"].active{ background:var(--amber-dim); border-color:var(--amber); color:var(--amber); }
+.tag-btn[data-tag="Administrative"].active{ background:var(--emerald-dim); border-color:var(--emerald); color:var(--emerald); }
+.tag-btn[data-tag="Technical"].active{ background:rgba(154,161,175,0.16); border-color:var(--cream-faint); color:var(--cream); }
+.tag-btn[data-tag="Ethics"].active{ background:var(--crimson-dim); border-color:var(--crimson); color:var(--crimson); }
+.qcount{ font-family:var(--mono); font-size:12px; color:var(--cream-faint); margin-bottom:18px; }
+.acts{ display:flex; flex-direction:column; gap:36px; }
+.act-block h3{ font-size:15px; font-family:var(--mono); text-transform:uppercase; letter-spacing:0.08em; color:var(--cream-faint); margin-bottom:14px; padding-bottom:10px; border-bottom:1px solid var(--slate-line); }
+.act-block h3 span{ color:var(--amber); }
+.qlist{ display:flex; flex-direction:column; gap:1px; }
+.qrow{ display:grid; grid-template-columns:34px 1fr auto auto; align-items:center; gap:14px; padding:13px 4px; border-bottom:1px solid var(--slate-line); }
+.qrow .qid{ font-family:var(--mono); font-size:11.5px; color:var(--cream-faint); }
+.qrow .qtext{ font-size:14.8px; }
+.qrow .qtag{
+  font-family:var(--mono); font-size:9.5px; text-transform:uppercase; letter-spacing:0.05em; padding:4px 9px; border-radius:20px;
+  border:1px solid var(--slate-line); color:var(--cream-faint); white-space:nowrap;
+}
+.qrow .qtag.t-Personal, .qrow .qtag.t-Mindset{ border-color:var(--amber); color:var(--amber); }
+.qrow .qtag.t-Administrative{ border-color:var(--emerald); color:var(--emerald); }
+.qrow .qtag.t-Ethics{ border-color:var(--crimson); color:var(--crimson); }
+.copy-btn{
+  background:none; border:1px solid var(--slate-line); color:var(--cream-faint); border-radius:6px;
+  width:30px; height:30px; cursor:pointer; display:flex; align-items:center; justify-content:center; flex-shrink:0;
+}
+.copy-btn:hover{ border-color:var(--amber); color:var(--amber); }
+.copy-btn svg{ width:14px; height:14px; }
+.copy-btn.copied{ border-color:var(--emerald); color:var(--emerald); }
+.no-results{ color:var(--cream-faint); font-size:14px; padding:24px 0; }
+@media (max-width:720px){
+  .qrow{ grid-template-columns:1fr auto; }
+  .qrow .qid, .qrow .qtag{ display:none; }
+}
 
-        .story-title { font-weight: 700; color: #FFF; font-size: 0.96rem; margin-bottom: 4px; }
-        .story-desc { color: var(--text-muted); font-size: 0.9rem; line-height: 1.65; }
+/* ============ VAULT ============ */
+.vault-grid{ display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:18px; margin-top:36px; }
+.vcard{
+  background:var(--ink-2); border:1px solid var(--slate-line); border-radius:10px; padding:20px;
+  display:flex; flex-direction:column; gap:10px; text-decoration:none; color:inherit;
+  transition:border-color .15s, transform .15s;
+}
+.vcard:hover{ border-color:var(--amber); transform:translateY(-2px); }
+.vcard-top{ display:flex; justify-content:space-between; align-items:flex-start; gap:10px; }
+.outlet-badge{ font-family:var(--mono); font-size:10.5px; text-transform:uppercase; letter-spacing:0.06em; color:var(--ink); background:var(--cream); padding:4px 9px; border-radius:4px; font-weight:700; }
+.vcard-date{ font-family:var(--mono); font-size:10.5px; color:var(--cream-faint); }
+.vcard h4{ font-size:15.5px; line-height:1.35; font-weight:600; font-family:var(--sans); }
+.vcard p{ font-size:13.2px; color:var(--cream-dim); margin:0; flex:1; }
+.vcard-link{ font-family:var(--mono); font-size:11px; color:var(--amber); display:flex; align-items:center; gap:5px; }
 
-        .question-card {
-            background: rgba(255,255,255,0.02);
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            padding: 18px 20px;
-            margin-bottom: 14px;
-        }
+.media-row{ margin-top:36px; }
+.media-row h3{ font-size:14px; font-family:var(--mono); text-transform:uppercase; letter-spacing:0.08em; color:var(--cream-faint); margin-bottom:16px; }
+.media-grid{ display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:14px; }
+.media-slot{
+  border:1.5px dashed var(--slate-line); border-radius:10px; padding:22px; text-align:center;
+  color:var(--cream-faint); font-family:var(--mono); font-size:11.5px; display:flex; flex-direction:column; align-items:center; gap:10px;
+}
+.media-slot svg{ width:22px; height:22px; stroke:var(--cream-faint); }
 
-        .q-pill {
-            display: inline-block;
-            font-size: 0.7rem;
-            font-weight: 700;
-            color: var(--amber);
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            margin-bottom: 6px;
-        }
+/* ============ EDITORIAL NOTE ============ */
+.note-box{ background:var(--ink-2); border:1px solid var(--slate-line); border-radius:12px; padding:30px; margin-top:8px; }
+.note-box h3{ font-size:17px; margin-bottom:14px; }
+.note-box ul{ margin:0; padding-left:20px; color:var(--cream-dim); font-size:14.3px; }
+.note-box li{ margin-bottom:10px; }
+.note-box li:last-child{ margin-bottom:0; }
 
-        .q-text {
-            font-size: 1rem;
-            font-weight: 600;
-            color: #F9FAFB;
-            margin-bottom: 6px;
-            line-height: 1.55;
-        }
+/* ============ FOOTER ============ */
+footer{ padding:50px 40px 70px; text-align:center; }
+.footer-inner{ max-width:var(--max); margin:0 auto; }
+.export-row{ display:flex; gap:14px; justify-content:center; flex-wrap:wrap; margin-bottom:28px; }
+.btn-export{
+  font-family:var(--mono); font-size:12.5px; text-transform:uppercase; letter-spacing:0.06em;
+  background:var(--ink-2); border:1px solid var(--cream-faint); color:var(--cream);
+  padding:13px 22px; border-radius:8px; cursor:pointer; display:flex; align-items:center; gap:8px;
+}
+.btn-export:hover{ border-color:var(--amber); color:var(--amber); }
+footer p{ color:var(--cream-faint); font-size:12.5px; max-width:560px; margin:0 auto; }
 
-        .q-context {
-            font-size: 0.85rem;
-            color: var(--text-muted);
-            line-height: 1.5;
-        }
+/* ============ FOCUS MODE ============ */
+body.focus-mode .chapter-nav{ display:none; }
+body.focus-mode .shell{ grid-template-columns:1fr; }
+body.focus-mode main{ max-width:760px; margin:0 auto; }
+body.focus-mode .section{ padding:56px 24px; }
+body.focus-mode .hero-grid, body.focus-mode .map-wrap, body.focus-mode .numbers-grid{ grid-template-columns:1fr; }
+body.focus-mode p, body.focus-mode .order-body p{ font-size:17.5px; line-height:1.8; }
+body.focus-mode .qbar, body.focus-mode .vault-grid, body.focus-mode .media-row{ display:none; }
 
-        .source-link-card {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: #1F2937;
-            border: 1px solid #374151;
-            padding: 16px 20px;
-            border-radius: 8px;
-            text-decoration: none;
-            color: #FFFFFF;
-            margin-bottom: 12px;
-            transition: all 0.2s ease;
-        }
-
-        .source-link-card:hover {
-            border-color: #60A5FA;
-            background: #283548;
-            transform: translateX(4px);
-        }
-
-        .source-title { font-weight: 700; font-size: 0.92rem; color: #93C5FD; margin-bottom: 2px; }
-        .source-desc { font-size: 0.82rem; color: #D1D5DB; }
-        .source-btn { background: #2563EB; color: #FFF; padding: 6px 14px; border-radius: 6px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; white-space: nowrap; margin-left: 12px; }
-
-        .hook-box {
-            background: #000;
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            padding: 16px 20px;
-            margin-bottom: 14px;
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.85rem;
-            line-height: 1.65;
-            color: #D1D5DB;
-        }
-
-        .footer {
-            text-align: center;
-            color: var(--text-muted);
-            font-size: 0.82rem;
-            margin-top: 40px;
-            border-top: 1px solid var(--border);
-            padding-top: 20px;
-        }
-    </style>
+/* ============ RESPONSIVE ============ */
+@media (max-width:980px){
+  .hero-grid, .map-wrap, .numbers-grid{ grid-template-columns:1fr; }
+  .shell{ grid-template-columns:1fr; }
+  .chapter-nav{ display:none; }
+  .nav-toggle{ display:inline-flex; }
+  .section{ padding:56px 22px; }
+  .ribbon{ padding:20px 22px; }
+}
+@media print{
+  .topbar, .progress-track, .chapter-nav, .qbar, footer, .media-row{ display:none !important; }
+  body{ background:#fff; color:#111; }
+  .section{ border:none; page-break-inside:avoid; }
+  .order-slip, .vcard, .svc-card, .numbers-note, .note-box{ border:1px solid #ccc; background:#fafafa; }
+  a{ color:#111; text-decoration:underline; }
+}
+</style>
 </head>
 <body>
 
-<div class="container">
-    <div class="hero-card">
-        <span class="badge">Figuring Out • Pre-Interview Briefing</span>
-        <h1>Tukaram Mundhe (IAS)</h1>
-        <p class="subhead">Origins, Institutional Governance, Ground Reality of Public Administration, and Public Health Audits</p>
+<div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
 
-        <div class="stat-grid">
-            <div class="stat-box">
-                <div class="stat-label">Birthplace</div>
-                <div class="stat-val">Tadsonna (Beed, MH)</div>
-            </div>
-            <div class="stat-box">
-                <div class="stat-label">Education</div>
-                <div class="stat-val">BA (History), MA (Pol Science)</div>
-            </div>
-            <div class="stat-box">
-                <div class="stat-label">UPSC Result</div>
-                <div class="stat-val">AIR 20 (2005 Batch)</div>
-            </div>
-            <div class="stat-box">
-                <div class="stat-label">Current Role</div>
-                <div class="stat-val">Commissioner, Maharashtra FDA</div>
-            </div>
+<header class="topbar">
+  <div class="topbar-brand"><span class="dot"></span> The Anatomy of Ground Administration</div>
+  <div class="topbar-actions">
+    <button class="btn-chip nav-toggle" id="navToggle" aria-expanded="false">Chapters</button>
+    <button class="btn-chip" id="focusToggle" aria-pressed="false">Focus Mode</button>
+  </div>
+</header>
+
+<div class="shell">
+  <nav class="chapter-nav" id="chapterNav" aria-label="Chapters">
+    <ol>
+      <li><a href="#hero" class="navlink"><span class="num">00</span>Cover</a></li>
+      <li><a href="#ribbon" class="navlink"><span class="num">01</span>Service Record</a></li>
+      <li><a href="#timeline" class="navlink"><span class="num">02</span>Chronology</a></li>
+      <li><a href="#numbers" class="navlink"><span class="num">03</span>By the Numbers</a></li>
+      <li><a href="#map" class="navlink"><span class="num">04</span>Transfer Map</a></li>
+      <li><a href="#questions" class="navlink"><span class="num">05</span>75 Questions</a></li>
+      <li><a href="#vault" class="navlink"><span class="num">06</span>Source Vault</a></li>
+      <li><a href="#note" class="navlink"><span class="num">07</span>Methodology</a></li>
+    </ol>
+  </nav>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="section hero" id="hero">
+      <div class="section-inner hero-grid">
+        <div>
+          <div class="hero-eyebrow">Field Dossier · Maharashtra Cadre, 2005 Batch</div>
+          <h1>The Uncompromising<br>Civil Servant: <em>Tukaram Mundhe</em></h1>
+          <p class="hero-sub">Beyond the transfer-count headline — a sourced audit of a farmer's son from drought-hit Beed who became one of Maharashtra's most reposted, most litigated-over, and most publicly defended IAS officers. Every claim below is linked to public reporting; every disputed number is shown as disputed.</p>
+          <div class="hero-scrollcue">↓ Scroll for the chronology, the ledger, and 75 questions no one has fully asked him</div>
         </div>
-    </div>
-
-    <!-- SECTION 1: DETAILED BIOGRAPHY -->
-    <div class="card">
-        <div class="card-heading">🌱 1. Biographical Background & Early Hardships</div>
-        
-        <div class="story-block">
-            <div class="story-title">Farming Roots in Drought-Prone Marathwada</div>
-            <div class="story-desc">
-                Born in Tadsonna village, Beed district. Raised in a humble agrarian family, he balanced his primary education at the local Zilla Parishad school with field labor—waking up at 2:00 AM to manage irrigation schedules when power was briefly available and selling farm produce in weekly village markets.
-            </div>
+        <div class="svc-card">
+          <div class="svc-title">Executive Archive Summary</div>
+          <div class="svc-name">Tukaram Haribhau Mundhe</div>
+          <div class="svc-role">Commissioner, Maharashtra FDA</div>
+          <div class="svc-row"><span>Hometown</span><span>Tadsona, Beed (Marathwada)</span></div>
+          <div class="svc-row"><span>Born</span><span>3 June 1975</span></div>
+          <div class="svc-row"><span>Batch</span><span>IAS 2005, Maharashtra</span></div>
+          <div class="svc-row"><span>UPSC CSE 2004</span><span>AIR 20</span></div>
+          <div class="svc-row"><span>Reported postings</span><span>~25 (range 15–27)*</span></div>
+          <div class="svc-row"><span>Known as</span><span>"Singham IAS"</span></div>
+          <div class="svc-row"><span>Current post</span><span>FDA Commissioner (since 15 May 2026)</span></div>
+          <div class="svc-note">*Counts vary by outlet and by how postings, deputations and additional charges are tallied. See "By the Numbers."</div>
         </div>
+      </div>
+    </section>
 
-        <div class="story-block" style="border-left-color: #10B981;">
-            <div class="story-title">Academic Pursuit & The UPSC Journey</div>
-            <div class="story-desc">
-                Inspired by his elder brother (the first graduate from their village), he pursued his BA in History and MA in Political Science from Dr. Babasaheb Ambedkar Marathwada University (BAMU), Aurangabad. Despite multiple initial setbacks across four rigorous exam cycles, he secured All India Rank 20 in UPSC Civil Services Exam 2004.
-            </div>
+    <!-- METRIC RIBBON -->
+    <section class="ribbon" id="ribbon">
+      <div class="ribbon-inner" id="ribbonInner"></div>
+    </section>
+
+    <!-- TIMELINE -->
+    <section class="section" id="timeline">
+      <div class="section-inner">
+        <div class="eyebrow">Chapter 02</div>
+        <h2>The Chronology, Posting by Posting</h2>
+        <p class="section-lede">Twelve documented stops, 1975 to the present. Each entry is drawn from named reporting — expand any entry for the sourced detail.</p>
+        <div class="ledger" id="ledger"></div>
+      </div>
+    </section>
+
+    <!-- BY THE NUMBERS -->
+    <section class="section" id="numbers">
+      <div class="section-inner">
+        <div class="eyebrow">Chapter 03</div>
+        <h2>By the Numbers — and Where the Numbers Disagree</h2>
+        <p class="section-lede">"25 transfers" is the figure most 2026 coverage repeats. It isn't the only one on record.</p>
+        <div class="numbers-grid">
+          <div class="tally" id="tally"></div>
+          <div class="numbers-note">
+            <strong>Why the count moves.</strong> Outlets differ on whether a "posting" includes short-term additional charges, training assignments, and secretariat deputations, and each new report simply adds to whatever base the last one used. The one figure every version agrees on: across roughly two decades, Mundhe's average tenure in a post has run well under the three-year norm the IAS itself prescribes.
+          </div>
         </div>
-    </div>
+      </div>
+    </section>
 
-    <!-- SECTION 2: ADMINISTRATIVE PLAYBOOKS -->
-    <div class="card">
-        <div class="card-heading">🏛️ 2. Key Administrative Interventions & Ground Impact</div>
-
-        <div class="story-block" style="border-left-color: #E11D48;">
-            <div class="story-title">Solapur & Washim: Natural Resource Audits (2008–2010)</div>
-            <div class="story-desc">
-                Led extensive raids against unauthorized sand mining along riverbeds and dismantled illicit country liquor networks. Prioritized tribal welfare verification and school teacher attendance audits during his tenure as CEO, Zilla Parishad Washim.
-            </div>
+    <!-- MAP -->
+    <section class="section" id="map">
+      <div class="section-inner">
+        <div class="eyebrow">Chapter 04</div>
+        <h2>The Transfer Map</h2>
+        <p class="section-lede">Eight places, one career. Click a marker for what happened there. Schematic layout — not to scale.</p>
+        <div class="map-wrap">
+          <div class="map-svg-box">
+            <svg viewBox="0 0 420 460" id="mapSvg" role="img" aria-label="Schematic map of Maharashtra with markers for Tukaram Mundhe's postings">
+              <path d="M150,18 C210,10 270,26 310,48 C352,70 372,100 362,140 C356,168 336,186 322,214 C310,238 314,266 296,296 C280,322 254,336 236,360 C214,388 196,416 158,432 C124,446 92,438 72,412 C50,384 46,350 30,318 C16,290 8,258 14,224 C20,190 40,166 40,134 C40,102 60,76 92,54 C112,40 130,26 150,18 Z"
+                fill="var(--ink-3)" stroke="var(--slate-line)" stroke-width="1.5"/>
+              <g id="cityDots"></g>
+            </svg>
+            <div class="map-caption">MAHARASHTRA — SCHEMATIC / NOT TO SCALE</div>
+          </div>
+          <div class="map-detail" id="mapDetail">
+            <p class="map-hint">Select a marker on the map to see what happened there — from a childhood market town to a state secretariat.</p>
+          </div>
         </div>
+      </div>
+    </section>
 
-        <div class="story-block" style="border-left-color: #F59E0B;">
-            <div class="story-title">Navi Mumbai (NMMC): Civic Finances & Citizen Governance (2016)</div>
-            <div class="story-desc">
-                Audited property tax evasions, removed commercial encroachments, and initiated the direct "Walk with Commissioner" grievance redressal open house. When 105 corporators passed a No-Confidence Motion, thousands of local residents mobilized peaceful public demonstrations to support his administrative measures.
-            </div>
+    <!-- QUESTIONS -->
+    <section class="section" id="questions">
+      <div class="section-inner">
+        <div class="eyebrow">Chapter 05</div>
+        <h2>75 Unfiltered Questions</h2>
+        <p class="section-lede">An original research brief for producers and podcast hosts — five acts, organised from childhood market stalls to the FDA raid rooms of 2026. These are prompts to put to him, not a transcript of anything he has said.</p>
+        <div class="qbar">
+          <div class="qsearch">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+            <input type="text" id="qSearch" placeholder="Search all 75 questions — try “paneer”, “transfer”, “UPSC”…" aria-label="Search questions">
+          </div>
+          <div class="tagfilter" id="tagFilter"></div>
         </div>
+        <div class="qcount" id="qCount"></div>
+        <div class="acts" id="acts"></div>
+      </div>
+    </section>
 
-        <div class="story-block" style="border-left-color: #3B82F6;">
-            <div class="story-title">Pune (PMPML) & Nagpur: Public Infrastructure & COVID Response</div>
-            <div class="story-desc">
-                Standardized scheduled bus operations in Pune to cut contractor dead mileage. Spearheaded emergency containment infrastructure and medical procurement during early COVID-19 management in Nagpur.
-            </div>
+    <!-- VAULT -->
+    <section class="section" id="vault">
+      <div class="section-inner">
+        <div class="eyebrow">Chapter 06</div>
+        <h2>Source Vault</h2>
+        <p class="section-lede">Every card below links to a real, checkable article used to build this dossier. Nothing here is invented.</p>
+        <div class="vault-grid" id="vaultGrid"></div>
+        <div class="media-row">
+          <h3>Field Recordings — Producer Slots</h3>
+          <div class="media-grid">
+            <div class="media-slot"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>Video slot — Navi Mumbai "Walk with Commissioner" footage</div>
+            <div class="media-slot"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 1a3 3 0 00-3 3v8a3 3 0 006 0V4a3 3 0 00-3-3z"/><path d="M19 10v2a7 7 0 01-14 0v-2"/></svg>Audio slot — FDA press briefing on the paneer ban</div>
+            <div class="media-slot"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>Video slot — Nagpur COVID war-room review</div>
+          </div>
         </div>
+      </div>
+    </section>
 
-        <div class="story-block" style="border-left-color: #10B981;">
-            <div class="story-title">Maharashtra FDA: Food Safety & Pharma Transparency (2026)</div>
-            <div class="story-desc">
-                Enforced statewide prohibitions on adulterated food substitutes (analogue fake paneer), audited kitchen hygiene protocols across commercial restaurants, and cancelled operational licenses for pharma manufacturers failing strict purity benchmarks.
-            </div>
+    <!-- METHODOLOGY -->
+    <section class="section" id="note">
+      <div class="section-inner">
+        <div class="eyebrow">Chapter 07</div>
+        <h2>A Note on Sourcing &amp; Privacy</h2>
+        <div class="note-box">
+          <h3>How this dossier was built, and what it deliberately leaves out</h3>
+          <ul>
+            <li><strong>Transfer/posting counts vary by source</strong> — reported figures range from 15 to 27 across different years and outlets. We show the range rather than picking one number to sound definitive.</li>
+            <li><strong>Family privacy.</strong> Mundhe is reported to be married with children. Because coverage of his immediate family is inconsistent — one source explicitly states these details are kept private — this dossier does not publish names or personal details of family members who are not themselves public officials.</li>
+            <li><strong>The 75 Questions are prompts, not a transcript.</strong> They were written for this dossier as a research aid for interviewers; they are not quotes, and no answers are attributed to Mundhe anywhere in this piece.</li>
+            <li><strong>Dates on mid-career postings</strong> (particularly early district assignments) are reported inconsistently across profiles; where we could not confirm a specific date range, we've said so rather than guessing.</li>
+            <li><strong>Current posting</strong> reflects reporting current to mid-August 2026. Given how frequently this officer has been reposted, treat "current" as provisional.</li>
+          </ul>
         </div>
-    </div>
+      </div>
+    </section>
 
-    <!-- SECTION 3: EXPANDED & RESPECTFUL QUESTION ARCHITECTURE -->
-    <div class="card">
-        <div class="card-heading">🎙️ 3. Comprehensive Question Framework (Curiosity-Led & Conversational)</div>
-
-        <div class="question-card">
-            <span class="q-pill">Theme 1 • The Realities of Civil Services Preparation</span>
-            <div class="q-text">"You studied in a village Zilla Parishad school and had to manage farming alongside your studies. For millions of students in small towns preparing for UPSC without expensive coaching, what is the single biggest mindset shift needed to compete at the national level?"</div>
-            <div class="q-context">Context: Explores practical discipline, regional-medium challenges, and overcoming early socioeconomic hurdles.</div>
-        </div>
-
-        <div class="question-card">
-            <span class="q-pill">Theme 2 • The Gap Between Ideals and Ground Reality</span>
-            <div class="q-text">"When someone clears the exam, they enter the service with an ideal image of public administration. What is the biggest shock or adjustment an officer faces on their very first district posting?"</div>
-            <div class="q-context">Context: Breaks down the real-world operational complexities of handling ground bureaucracy, staff constraints, and local friction.</div>
-        </div>
-
-        <div class="question-card">
-            <span class="q-pill">Theme 3 • The Anatomy of City Finances & Infrastructure</span>
-            <div class="q-text">"Every taxpayer wonders why public infrastructure like roads, clean water, or transport often faces execution bottlenecks across Indian cities. Having managed municipal corporations, where does the real challenge lie—budgets, planning, or accountability?"</div>
-            <div class="q-context">Context: Discusses municipal revenue models, tender accountability, and how cities can become self-sustaining.</div>
-        </div>
-
-        <div class="question-card">
-            <span class="q-pill">Theme 4 • The Personal Demands of Public Integrity</span>
-            <div class="q-text">"Your career has involved frequent relocations across different departments and districts. What kind of resilience and personal sacrifices does that require from you and your family behind the scenes?"</div>
-            <div class="q-context">Context: Explores the human, emotional, and psychological side of uncompromising administrative duty.</div>
-        </div>
-
-        <div class="question-card">
-            <span class="q-pill">Theme 5 • Public Health & What Everyday Indians Consume</span>
-            <div class="q-text">"With the recent FDA crackdowns on fake analogue paneer and adulterated products, what should everyday Indian families look out for to ensure the food and medicines they buy are safe?"</div>
-            <div class="q-context">Context: Practical, actionable health insights that directly benefit the everyday viewer.</div>
-        </div>
-    </div>
-
-    <!-- SECTION 4: VERIFIED SOURCES & MEDIA ARCHIVE -->
-    <div class="card" style="border: 1px solid #3B82F6;">
-        <div class="card-heading" style="color: #60A5FA;">
-            📚 4. Verified Sources & Investigative Archive
-        </div>
-        <p style="color: var(--text-muted); font-size: 0.88rem; margin-bottom: 18px;">
-            Primary national reports, career profiles, and official investigative documentation:
-        </p>
-
-        <a href="https://www.thehindu.com/news/national/maharashtra/who-is-tukaram-mundhe-the-ias-officer-leading-maharashtras-fda-crackdown/article71349308.ece" target="_blank" rel="noopener noreferrer" class="source-link-card">
-            <div>
-                <div class="source-title">The Hindu • Profile & FDA Crackdown</div>
-                <div class="source-desc">Detailed background on childhood in Beed, academic journey, and regulatory reforms.</div>
-            </div>
-            <div class="source-btn">Open Article ↗</div>
-        </a>
-
-        <a href="https://timesofindia.indiatimes.com/life-style/people/meet-tukaram-mundhe-from-a-farmers-son-in-maharashtras-drought-hit-beed-to-one-of-indias-most-recognisable-ias-officers/articleshow/133155979.cms" target="_blank" rel="noopener noreferrer" class="source-link-card">
-            <div>
-                <div class="source-title">Times of India • Biographical Feature</div>
-                <div class="source-desc">Covering his early life, family background, and administrative philosophy.</div>
-            </div>
-            <div class="source-btn">Open Article ↗</div>
-        </a>
-
-        <a href="https://www.jansatta.com/trending-news/tukaram-mundhe-nakli-paneer-hotel-fda-maharashtra/4668229/" target="_blank" rel="noopener noreferrer" class="source-link-card">
-            <div>
-                <div class="source-title">Jansatta • Ground Investigation</div>
-                <div class="source-desc">Statewide inspections against analogue food substitutes and restaurant compliance audits.</div>
-            </div>
-            <div class="source-btn">Open Article ↗</div>
-        </a>
-
-        <a href="https://indianexpress.com/article/cities/mumbai/ias-officer-tukaram-mundhe-transferred-within-2-months-8296982/" target="_blank" rel="noopener noreferrer" class="source-link-card">
-            <div>
-                <div class="source-title">The Indian Express • Administrative Analysis</div>
-                <div class="source-desc">Documented review of departmental tenures and institutional frameworks.</div>
-            </div>
-            <div class="source-btn">Open Article ↗</div>
-        </a>
-    </div>
-
-    <!-- SECTION 5: READY-TO-RECORD SHORT HOOKS -->
-    <div class="card">
-        <div class="card-heading">🎬 5. Ready-to-Record Short-Form Hook Concepts</div>
-
-        <div class="hook-box">
-[HOOK 1 - The Reality of Civic Infrastructure]
-Visual: Direct studio angle, dynamic subtitles.
-Raj: "Why do city roads and drainage systems often need repeated repairs right after monsoon?"
-Mundhe: "Because long-term infrastructure requires end-to-end accountability in maintenance contracts and regular auditing before tenders are cleared."
-        </div>
-
-        <div class="hook-box">
-[HOOK 2 - The Food Safety Warning]
-Visual: Split screen with inspection footage headlines.
-Raj: "What is the biggest thing ordinary citizens should look out for regarding food adulteration?"
-Mundhe: "Always look for transparent labeling. When synthetic fats replace real dairy under the guise of imitation cheese, consumers have a legal right to know what they are paying for."
-        </div>
-    </div>
-
-    <div class="footer">
-        Researched & Built by Shraddha Jamdade | Prepared for Figuring Out Media Team
-    </div>
+  </main>
 </div>
 
+<footer>
+  <div class="footer-inner">
+    <div class="export-row">
+      <button class="btn-export" id="exportMd">⬇ Download brief (Markdown)</button>
+      <button class="btn-export" id="exportPdf">🖨 Print / Save as PDF</button>
+    </div>
+    <p>Compiled from public reporting for research and editorial reference. Not an official biography, and not affiliated with the Government of Maharashtra or any subject named above. See Chapter 06 for full sourcing.</p>
+  </div>
+</footer>
+
+<script>
+/* ============================================================
+   DATA
+   ============================================================ */
+const TIMELINE = [
+  { period:"1975 – 1996", title:"Roots in Tadsona, Beed", status:"amber",
+    body:"Born 3 June 1975 in Tadsona, a village in the drought-prone Beed district of Marathwada, into a farming family. His official name — Tukaram Haribhau Mundhe — carries his father's given name, as recorded in Department of Personnel &amp; Training civil-list documentation. Multiple profiles describe him doing farm work from a young age and studying at a Marathi-medium Zilla Parishad school before matriculating in 1996.",
+    src:"Sources: Business Standard; StockLens (DoPT Civil List); IndianBureaucracy.com"},
+  { period:"1996 – 2001", title:"Two Degrees and a Fourth-Attempt Breakthrough", status:"amber",
+    body:"Completed his undergraduate studies at the Government College of Arts &amp; Science in what was then Aurangabad (now Chhatrapati Sambhajinagar), then a BA in History and MA in Political Science from Dr. Babasaheb Ambedkar Marathwada University, alongside a UGC-JRF in political science. He failed the Maharashtra Public Service Commission (MPSC) examination three times before clearing it in 2001 — the state-level exam, not the UPSC.",
+    src:"Sources: Business Standard; WikiIAS; biographykind.com"},
+  { period:"2004 – 2005", title:"AIR 20 and the Maharashtra Cadre", status:"emerald",
+    body:"Secured All-India Rank 20 in the UPSC Civil Services Examination 2004 and was allotted the 2005 IAS batch on his home Maharashtra cadre. His first posting was as Supernumerary Assistant Collector in Solapur from August 2005, where multiple profiles say he moved quickly against an illegal bar with local political backing.",
+    src:"Sources: Newsgram; Business Standard; biographykind.com"},
+  { period:"Solapur", title:"District Administration — Sand Mining and Revenue Discipline", status:"emerald",
+    body:"In a later posting as District Collector of Solapur, Mundhe is reported to have moved against illegal sand mining and encroachments and pushed for more transparent revenue administration. Exact dates for this posting are reported inconsistently across profiles, so we're not asserting a specific year range here.",
+    src:"Sources: Business Today; general career profiles (date range unconfirmed)"},
+  { period:"2016 – 2017", title:"Navi Mumbai Municipal Corporation — the No-Confidence Vote", status:"crimson",
+    body:"As NMMC Commissioner from mid-2016, Mundhe pursued a property survey that found more than 15,000 owners allegedly evading tax, rationalised the tendering process, moved against unauthorised construction, and cancelled a contested marble-cladding contract on the Dr. Ambedkar Memorial dome, citing an adverse IIT report and a claimed ₹20-crore saving. On 25 October 2016, NCP, Shiv Sena and Congress corporators combined to pass a no-confidence motion by a reported 105–6 (one contemporaneous account puts it at 104–6, with one member absent) out of 111 corporators — the first such motion in NMMC's history. Residents organised a 'Walk for the Commissioner' march from Vashi station and a #SaveTukaram social-media campaign; the state government did not act on the motion, but he was transferred the following year regardless.",
+    src:"Sources: The Quint; India.com; LocalPressCo; Hindustan Times (via PressReader); Change.org petition"},
+  { period:"Mar 2017 – late 2017", title:"PMPML, Pune — Fleet, Fines and Threat Letters", status:"emerald",
+    body:"As Chairman &amp; Managing Director of Pune Mahanagar Parivahan Mahamandal Ltd, he introduced automatic vehicle-location and fare-collection systems, added roughly 800 buses to the fleet, raised fines for ticketless travel, ended a contested contract with a private bus operator, and dismissed 61 staff while suspending over 200 more across his tenure. He also received a string of threat letters from a resident during this period — a reported, on-record incident, not a dramatised one.",
+    src:"Sources: The Bridge Chronicle (×2); eGov/Elets News Network"},
+  { period:"2018", title:"Nashik Municipal Corporation", status:"crimson",
+    body:"A citywide survey he ordered found more than two lakh (200,000+) irregular structures and roughly ₹257 crore in stalled road projects. He raised, then partly rolled back, a contested property-tax hike after public pressure, and publicly said he would accept a transfer if it actually solved Nashik's problems — while a BJP-led no-confidence push moved forward regardless.",
+    src:"Sources: Deccan Herald; Free Press Journal (via PressReader)"},
+  { period:"2019", title:"Maharashtra State AIDS Control Society", status:"amber",
+    body:"Served as project director in a comparatively brief, lower-profile posting before his next transfer.",
+    src:"Source: Hindustan Times (via PressReader)"},
+  { period:"Jan – Sep 2020", title:"Nagpur Municipal Corporation — COVID-19's First Wave", status:"emerald",
+    body:"Took charge of Nagpur just as COVID-19 reached India. Ran a door-to-door health survey covering more than 24 lakh residents, declared the city a red zone (a notification the Bombay High Court declined to stay on challenge), moved homeless residents into shelters, and held daily reviews with medical officers. He tested positive for COVID-19 himself in August 2020 and continued working through isolation. He also faced allegations over a maternity-leave dispute, which inquiries reportedly cleared him of; he was transferred in September 2020 amid public protests calling for him to stay.",
+    src:"Sources: ANI; The Bridge Chronicle; Deccan Herald; Business Today; Boldsky"},
+  { period:"2022", title:"Commissioner, Health Services &amp; MD, National Health Mission", status:"crimson",
+    body:"Made biometric attendance mandatory for medical officers, ordered surprise inspections of Primary Health Centres, and required on-call doctors to stay within two kilometres of their facility. He was transferred within roughly two months of taking charge — reportedly soon after pushing back on doctors combining government posts with private practice — prompting a public petition calling for his reinstatement.",
+    src:"Source: Change.org petition; Business Today"},
+  { period:"Aug 2025 – Mar 2026", title:"Secretary, Divyang Kalyan (Disability Welfare) Department", status:"emerald",
+    body:"Oversaw the creation of a digital service-delivery mechanism for persons with disabilities during this posting.",
+    src:"Source: online-ias.com career profile"},
+  { period:"15 May 2026 – present", title:"Commissioner, Maharashtra FDA — \"Singham IAS\"", status:"emerald",
+    body:"Took charge of the Food and Drug Administration and launched the 'Safe Food, Safe Medicine, Safe Maharashtra' enforcement drive. FDA testing found roughly 35% of sampled paneer non-compliant with food-safety norms; on 30 July 2026 he issued a gazette order banning analogue (non-dairy) paneer statewide for one year under the Food Safety and Standards Act, 2006 — violators face up to six months' imprisonment and a ₹1 lakh fine, rising to life imprisonment and a ₹10 lakh fine where unsafe food causes death. Raids included a roughly 1,400 kg fake-paneer seizure near Pune. The FDA also issued show-cause notices to film stars Shah Rukh Khan, Ajay Devgn and Tiger Shroff over an advertisement for a pan-masala-linked brand banned in Maharashtra. He is widely nicknamed \"Singham IAS\" by the public and press for his enforcement style.",
+    src:"Sources: Business Standard; Deccan Chronicle; Free Press Journal; The Logical Indian; IBTimes India; Outlook India; Business Today; Newsgram"}
+];
+
+const TALLY = [
+  {n:15, label:"transfers in 15 years", meta:"reported ~2020 (batchmate interview, ToI)"},
+  {n:23, label:"transfers in 19 years", meta:"circulating 2026 aggregator headline"},
+  {n:25, label:"transfers in 21 years", meta:"most-repeated figure, Aug 2026 FDA coverage"},
+  {n:27, label:"documented postings, 21 yrs / 15 locations", meta:"DoPT IAS Civil List, via StockLens"}
+];
+
+const CITIES = [
+  {name:"Beed", x:161, y:200, period:"1975 – 1996", role:"Birthplace & early life", note:"Tadsona village — farming family, Zilla Parishad schooling."},
+  {name:"Chh. Sambhajinagar", x:140, y:150, period:"1993 – 2001", role:"College & MPSC years", note:"Government College of Arts & Science; later BA/MA at Dr. B.A.M. University."},
+  {name:"Solapur", x:168, y:300, period:"2005; later as Collector", role:"First posting & District Collectorate", note:"First charge as Assistant Collector, 2005; later returned as District Collector targeting sand-mining and encroachment."},
+  {name:"Nashik", x:63, y:145, period:"2018", role:"Municipal Commissioner", note:"Encroachment survey, tax dispute, no-confidence push."},
+  {name:"Navi Mumbai", x:44, y:238, period:"2016 – 2017", role:"NMMC Commissioner", note:"Tax-roll audit; 105–6 no-confidence vote; citizen 'Walk for the Commissioner'."},
+  {name:"Pune", x:70, y:270, period:"2017 – 2018", role:"PMPML Chairman & MD", note:"Fleet expansion, fare/fine reform, mass staff action, threat letters."},
+  {name:"Nagpur", x:322, y:70, period:"Jan – Sep 2020", role:"Municipal Commissioner", note:"COVID-19 first-wave response; red-zone order; transferred amid protests to keep him."},
+  {name:"Mumbai", x:18, y:190, period:"2022 – 2026", role:"State secretariat postings", note:"NHM Commissioner, Divyang Kalyan Secretary, and now FDA Commissioner."}
+];
+
+const QUESTIONS = [
+  // ACT 1 — Roots, Hunger & Psychological Wiring (1-15)
+  {id:1, act:1, tag:"Personal", text:"What is your clearest memory of a morning at the Tadsona weekly market before school?"},
+  {id:2, act:1, tag:"Personal", text:"Which farm task — fencing, well-digging, sowing — taught you the most about patience?"},
+  {id:3, act:1, tag:"Mindset", text:"How did failing the MPSC exam three times change the way you prepared the fourth time?"},
+  {id:4, act:1, tag:"Mindset", text:"What did the years between your first exam attempt and clearing the MPSC in 2001 actually cost you?"},
+  {id:5, act:1, tag:"Mindset", text:"Was there a single day you nearly gave up on the civil services altogether?"},
+  {id:6, act:1, tag:"Personal", text:"How did your family react when the All-India Rank 20 result came in?"},
+  {id:7, act:1, tag:"Personal", text:"What did a Marathi-medium, Zilla Parishad education give you that an English-medium school couldn't?"},
+  {id:8, act:1, tag:"Personal", text:"Which teacher from your Beed schooling would recognise the officer you became?"},
+  {id:9, act:1, tag:"Mindset", text:"How did growing up without guaranteed water shape how you think about public infrastructure now?"},
+  {id:10, act:1, tag:"Personal", text:"What's one habit from your farming years you still carry into a government office?"},
+  {id:11, act:1, tag:"Personal", text:"Did coaching-institute culture even exist for someone in your position in the 1990s?"},
+  {id:12, act:1, tag:"Mindset", text:"What would you tell the version of yourself who was still selling produce on market day?"},
+  {id:13, act:1, tag:"Ethics", text:"How do you separate empathy for a struggling citizen from strictness toward a negligent official?"},
+  {id:14, act:1, tag:"Mindset", text:"What's the difference between the hunger that drove your UPSC preparation and the hunger you now see in the districts you administer?"},
+  {id:15, act:1, tag:"Personal", text:"Looking back, was clearing the state-level MPSC in 2001 a bigger turning point than AIR 20 in 2004?"},
+  // ACT 2 — Inside the System (16-35)
+  {id:16, act:2, tag:"Administrative", text:"Why does a freshly laid road in Maharashtra so often fail before the next monsoon?"},
+  {id:17, act:2, tag:"Technical", text:"Walk us through how a municipal tender gets quietly shaped before it's even advertised."},
+  {id:18, act:2, tag:"Administrative", text:"How did more than 15,000 Navi Mumbai property owners go untaxed for a decade before anyone flagged it?"},
+  {id:19, act:2, tag:"Technical", text:"What does a 5 a.m. depot inspection catch that a scheduled audit never will?"},
+  {id:20, act:2, tag:"Administrative", text:"How do water-tanker cartels form, and why are they so hard to dismantle?"},
+  {id:21, act:2, tag:"Ethics", text:"What's the real difference between political will and bureaucratic inertia, in your experience?"},
+  {id:22, act:2, tag:"Ethics", text:"Why do capable, rule-following officers so often get transferred more often than negligent ones?"},
+  {id:23, act:2, tag:"Technical", text:"How does a transport utility like PMPML lose money even when every bus is full?"},
+  {id:24, act:2, tag:"Technical", text:"What's the actual mechanism by which ticket revenue leaks out of a public bus system?"},
+  {id:25, act:2, tag:"Administrative", text:"When you dismiss dozens of staff at once, how do you know you've targeted the right people?"},
+  {id:26, act:2, tag:"Administrative", text:"Is the three-year tenure norm for IAS officers realistic, or a polite fiction?"},
+  {id:27, act:2, tag:"Ethics", text:"How much of 'encroachment' enforcement is really about law, and how much about who's connected to whom?"},
+  {id:28, act:2, tag:"Technical", text:"What's the fastest way to tell if a government department's attendance records are fabricated?"},
+  {id:29, act:2, tag:"Administrative", text:"How do you decide which broken rule to enforce first when everything needs fixing at once?"},
+  {id:30, act:2, tag:"Technical", text:"What's a reform that looked good on paper but failed the moment it met the ground?"},
+  {id:31, act:2, tag:"Technical", text:"How do you build a case against a contractor without a paper trail that leads back to you?"},
+  {id:32, act:2, tag:"Administrative", text:"What is a water-management drive like Jalyukt Shivar actually supposed to fix, and where does it fall short?"},
+  {id:33, act:2, tag:"Administrative", text:"Why do so many Indian city transit systems end up in the same financial hole?"},
+  {id:34, act:2, tag:"Ethics", text:"How do you tell the difference between an officer who is 'difficult' and one who is simply doing the job?"},
+  {id:35, act:2, tag:"Administrative", text:"What's one administrative reform from your career that quietly outlived your own transfer?"},
+  // ACT 3 — The Standoff & Personal Toll (36-50)
+  {id:36, act:3, tag:"Personal", text:"Where were you when you heard that 105 corporators had voted against you in Navi Mumbai?"},
+  {id:37, act:3, tag:"Personal", text:"What did you tell your family during the week of that no-confidence vote?"},
+  {id:38, act:3, tag:"Mindset", text:"Did the 'Walk for the Commissioner' march change how you saw your own position?"},
+  {id:39, act:3, tag:"Personal", text:"How many times has a transfer order arrived with less notice than you'd have liked?"},
+  {id:40, act:3, tag:"Personal", text:"What's it like moving a child to a new school because you've been reposted, again?"},
+  {id:41, act:3, tag:"Personal", text:"When threat letters arrived during your time at PMPML, did it change how you moved through your day?"},
+  {id:42, act:3, tag:"Mindset", text:"How do you keep a team motivated when everyone knows their boss could be gone within months?"},
+  {id:43, act:3, tag:"Ethics", text:"Is there a decision you signed knowing it would likely cost you the posting?"},
+  {id:44, act:3, tag:"Mindset", text:"What goes through your mind in the hour before you sign an order you know will be contested?"},
+  {id:45, act:3, tag:"Ethics", text:"Have you ever reversed a decision purely because the political cost became too high?"},
+  {id:46, act:3, tag:"Mindset", text:"What does 'I feel bad about being transferred, but it's the administration's call' actually mean underneath the calm?"},
+  {id:47, act:3, tag:"Administrative", text:"How do you rebuild trust with a department's staff after a mass transfer disrupts their leadership?"},
+  {id:48, act:3, tag:"Personal", text:"Which of your transfers, in hindsight, do you think was actually justified?"},
+  {id:49, act:3, tag:"Ethics", text:"What do your batchmates get right when they say you don't compromise enough with elected representatives?"},
+  {id:50, act:3, tag:"Mindset", text:"After two decades of this pattern, what keeps you from just letting the next posting go quietly?"},
+  // ACT 4 — FDA Investigations (51-65)
+  {id:51, act:4, tag:"Technical", text:"What exactly is 'analogue paneer,' and why does it look identical to the real thing on a plate?"},
+  {id:52, act:4, tag:"Technical", text:"How can a home cook tell adulterated paneer from genuine dairy paneer without a lab?"},
+  {id:53, act:4, tag:"Administrative", text:"What made the FDA choose a one-year prohibition instead of stricter labelling rules alone?"},
+  {id:54, act:4, tag:"Technical", text:"How did the department arrive at '35% of samples failed' as the number that triggered this crackdown?"},
+  {id:55, act:4, tag:"Administrative", text:"What happens to a restaurant's supply chain in the weeks after a ban like this takes effect?"},
+  {id:56, act:4, tag:"Technical", text:"Walk us through what a 1,400 kg fake-paneer raid actually looks like on the ground."},
+  {id:57, act:4, tag:"Ethics", text:"How much resistance do you get from restaurant and dairy lobbies once an order like this is signed?"},
+  {id:58, act:4, tag:"Ethics", text:"Why pursue celebrity endorsers of a banned product rather than only the manufacturer?"},
+  {id:59, act:4, tag:"Ethics", text:"Is a show-cause notice to a film star more about the law, or about public deterrence?"},
+  {id:60, act:4, tag:"Technical", text:"What happens to counterfeit or unsafe drugs once they enter a rural pharmacy's shelves?"},
+  {id:61, act:4, tag:"Ethics", text:"How do you weigh consumer health against the livelihoods of small dairy vendors caught in a wider crackdown?"},
+  {id:62, act:4, tag:"Administrative", text:"What's the honest limit of what a state FDA can inspect, given its actual staff and budget?"},
+  {id:63, act:4, tag:"Administrative", text:"Does a one-year gazette ban really change behaviour, or just pause it for a year?"},
+  {id:64, act:4, tag:"Technical", text:"What's the most surprising thing your inspectors have found inside a storage godown?"},
+  {id:65, act:4, tag:"Administrative", text:"If you had unlimited inspectors for one week, which part of Maharashtra's food chain would you target first?"},
+  // ACT 5 — Philosophy, Power & The Future of Indian Youth (66-75)
+  {id:66, act:5, tag:"Ethics", text:"What do coaching institutes sell tier-3 aspirants that has nothing to do with actually clearing the exam?"},
+  {id:67, act:5, tag:"Mindset", text:"If you had 24 hours to redesign the civil services exam, what's the first thing you'd change?"},
+  {id:68, act:5, tag:"Ethics", text:"Where's the line between following a superior's order and quietly enabling something wrong?"},
+  {id:69, act:5, tag:"Mindset", text:"What would you tell a 24-year-old officer walking into their first compromised department tomorrow?"},
+  {id:70, act:5, tag:"Mindset", text:"After 20-plus transfers, what does 'success' in a career like yours actually mean?"},
+  {id:71, act:5, tag:"Mindset", text:"Is the 'Singham' image a fair description of what you do, or a media simplification?"},
+  {id:72, act:5, tag:"Ethics", text:"What's a rule you've enforced that you privately think is badly designed?"},
+  {id:73, act:5, tag:"Mindset", text:"How do you want the next generation of IAS officers to read your career — as a method, or a warning?"},
+  {id:74, act:5, tag:"Mindset", text:"What's one myth about 'honest officers' that this career has taught you to drop?"},
+  {id:75, act:5, tag:"Mindset", text:"If today were your last day in government service, what's the one thing you'd want finished first?"}
+];
+
+const ACT_NAMES = {
+  1:"Act I — Roots, Hunger & Psychological Wiring",
+  2:"Act II — Inside the System",
+  3:"Act III — The Standoff & the Personal Toll",
+  4:"Act IV — What Everyday Indians Are Consuming",
+  5:"Act V — Philosophy, Power & the Future of Indian Youth"
+};
+
+const SOURCES = [
+  {outlet:"Outlook India", date:"Aug 2026", title:"21 Years, 25 Transfers: Tukaram Mundhe, The IAS Officer Leading Maharashtra's Food Safety Campaign", desc:"Profile tying his farming-family background and AIR 20 to the current FDA enforcement drive.", url:"https://www.outlookindia.com/national/tukaram-mundhe-ias-maharashtra-fda-food-and-drug-administration"},
+  {outlet:"Business Standard", date:"17 Aug 2026", title:"Who is Tukaram Mundhe? The IAS officer taking on Maharashtra's food sector", desc:"Covers his education at Dr. B.A.M. University and the FDA's celebrity show-cause notices.", url:"https://www.business-standard.com/india-news/who-is-tukaram-mundhe-the-ias-officer-taking-on-maharashtra-s-food-sector-126081700449_1.html"},
+  {outlet:"Business Standard", date:"5 Aug 2026", title:"Maharashtra govt bans analogue paneer for a year over food safety concerns", desc:"Details the gazette order, the 35.4% non-compliance rate, and the penalty structure.", url:"https://www.business-standard.com/india-news/maharashtra-govt-bans-analogue-paneer-for-a-year-over-food-safety-concerns-126080500374_1.html"},
+  {outlet:"Business Today", date:"6 Aug 2026", title:"Maharashtra's 'Singham' IAS Tukaram Mundhe: The officer with 25 transfers", desc:"Career-spanning profile covering Nashik, Nagpur COVID response and the FDA posting.", url:"https://www.businesstoday.in/india/story/maharashtras-singham-ias-tukaram-mundhe-the-officer-with-25-transfers-now-leading-maharashtra-fda-crackdown-547579-2026-08-06"},
+  {outlet:"The Quint", date:"26 Oct 2016", title:"Navi Mumbai Hero Ousted by Tainted Corporators; Will CM Save Him?", desc:"On-the-ground account of the NMMC no-confidence vote and the political alliance behind it.", url:"https://www.thequint.com/news/politics/no-confidence-vote-navi-mumbai-municipal-corporation-chief-tukaram-mundhe-passed-honest-corruption-ncp-shiv-sena"},
+  {outlet:"LocalPress Co.", date:"25 Oct 2016", title:"Politicians collude to sack 'honest' NMMC chief Tukaram Mundhe", desc:"Reports the 105–6 vote tally and the citizen 'Walk for the Commissioner' march.", url:"https://localpress.co.in/mumbai/politicians-collude-sack-honest-nmmc-chief-tukaram-mundhe-pass-no-confidence-motion/"},
+  {outlet:"The Bridge Chronicle", date:"2020", title:"Tough year for PMPML", desc:"Staff dismissals, fare changes, and the threat letters Mundhe received during his PMPML tenure.", url:"https://www.thebridgechronicle.com/pune/tough-year-pmpml-10859"},
+  {outlet:"Deccan Herald", date:"2018", title:"Transfer me if it solves Nashik's problems: Mundhe", desc:"His own public remarks on being repeatedly transferred, plus the Nashik tax-hike dispute.", url:"https://www.pressreader.com/india/the-free-press-journal/20180829/281749860220891"},
+  {outlet:"ANI", date:"2020", title:"Tukaram Mundhe — Nagpur COVID-19 coverage archive", desc:"Contemporaneous wire coverage of the Nagpur survey, quarantine strategy, and eventual transfer.", url:"https://www.aninews.in/topic/tukaram-mundhe/"},
+  {outlet:"Change.org", date:"2023", title:"Reinstatement petition — Commissioner, Family Welfare & Director NHM", desc:"Public petition detailing the biometric-attendance circular and his rapid transfer out of NHM.", url:"https://www.change.org/p/reinstatement-of-shri-tukaram-munde-ias-to-commissioner-family-welfare-director-nhm"},
+  {outlet:"Deccan Chronicle", date:"Aug 2026", title:"What Is Analogue Paneer? All About Maharashtra's Ban", desc:"Explains the science of analogue paneer and the FSS Act penalty tiers.", url:"https://www.deccanchronicle.com/nation/in-other-news/what-is-analogue-paneer-banned-in-maharashtra-1977337"},
+  {outlet:"StockLens", date:"Aug 2026", title:"IAS Tukaram H Mundhe — DoPT Civil List Profile", desc:"Official-record-sourced posting count: 27 postings across 21 years and 15 locations.", url:"https://www.stocklens.co.in/ias/officer/tukaram-h-mundhe-7900"}
+];
+
+/* ============================================================
+   RENDER: RIBBON
+   ============================================================ */
+const ribbonData = [
+  {label:"Hometown", value:"Tadsona, Beed", sub:"Marathwada, Maharashtra", c:""},
+  {label:"Batch", value:"IAS 2005 · AIR 20", sub:"UPSC CSE 2004", c:""},
+  {label:"Reported Postings", value:"~25 (range 15–27)", sub:"across ~21 years", c:"crimson"},
+  {label:"Current Post", value:"FDA Commissioner", sub:"since 15 May 2026", c:"emerald"},
+  {label:"Known As", value:"\u201cSingham IAS\u201d", sub:"public / press nickname", c:""},
+  {label:"Signature 2026 Action", value:"Analogue Paneer Ban", sub:"gazette order, 30 Jul 2026", c:"emerald"},
+  {label:"Defining Controversy", value:"NMMC No-Confidence Vote", sub:"105–6 of 111, Oct 2016", c:"crimson"}
+];
+document.getElementById('ribbonInner').innerHTML = ribbonData.map(r=>`
+  <div class="chip ${r.c?'c-'+r.c:''}">
+    <div class="chip-label">${r.label}</div>
+    <div class="chip-value">${r.value}</div>
+    <div class="chip-sub">${r.sub}</div>
+  </div>`).join('');
+
+/* ============================================================
+   RENDER: LEDGER / TIMELINE
+   ============================================================ */
+const ledgerEl = document.getElementById('ledger');
+ledgerEl.innerHTML = TIMELINE.map((t,i)=>{
+  const stampWord = t.status==='crimson' ? 'CONTESTED' : (t.status==='emerald' ? 'ENACTED' : 'FORMATIVE');
+  return `
+  <div class="ledger-item status-${t.status}">
+    <div class="ledger-dot"></div>
+    <div class="order-slip">
+      <div class="order-head">
+        <div class="order-head-l">
+          <span class="order-no">ORDER No. ${String(i+1).padStart(2,'0')}/DOSSIER</span>
+          <span class="order-period">${t.period}</span>
+        </div>
+        <span class="stamp st-${t.status}">${stampWord}</span>
+      </div>
+      <div class="order-body">
+        <h3>${t.title}</h3>
+        <div class="order-detail" id="detail-${i}"><p>${t.body}</p><p class="mono" style="font-size:11.5px;color:var(--cream-faint);">${t.src}</p></div>
+        <button class="expand" aria-expanded="false" data-target="detail-${i}">Read the sourced detail <span class="chev">▾</span></button>
+      </div>
+    </div>
+  </div>`;
+}).join('');
+
+document.querySelectorAll('.expand').forEach(btn=>{
+  btn.addEventListener('click', ()=>{
+    const target = document.getElementById(btn.dataset.target);
+    const open = target.classList.toggle('open');
+    btn.setAttribute('aria-expanded', open ? 'true':'false');
+    btn.innerHTML = open ? 'Hide detail <span class="chev">▾</span>' : 'Read the sourced detail <span class="chev">▾</span>';
+  });
+});
+
+/* ============================================================
+   RENDER: TALLY
+   ============================================================ */
+const maxN = Math.max(...TALLY.map(t=>t.n));
+document.getElementById('tally').innerHTML = TALLY.map(t=>`
+  <div class="tally-row">
+    <div class="tally-num">${t.n}</div>
+    <div class="tally-bar-track"><div class="tally-bar-fill" style="width:${(t.n/maxN*100).toFixed(0)}%"></div></div>
+    <div class="tally-meta">${t.label}<br>${t.meta}</div>
+  </div>`).join('');
+
+/* ============================================================
+   RENDER: MAP
+   ============================================================ */
+const cityDotsEl = document.getElementById('cityDots');
+cityDotsEl.innerHTML = CITIES.map((c,i)=>`
+  <g class="city-dot" data-i="${i}" tabindex="0" role="button" aria-label="${c.name}">
+    <circle cx="${c.x}" cy="${c.y}" r="6" fill="var(--cream-dim)" stroke="var(--ink)" stroke-width="2"/>
+    <text x="${c.x+10}" y="${c.y+4}">${c.name}</text>
+  </g>`).join('');
+
+function selectCity(i){
+  document.querySelectorAll('.city-dot').forEach(d=>d.classList.remove('active'));
+  const el = document.querySelector(`.city-dot[data-i="${i}"]`);
+  if(el) el.classList.add('active');
+  const c = CITIES[i];
+  document.getElementById('mapDetail').innerHTML = `
+    <h4>${c.name}</h4>
+    <div class="role">${c.role} · <span class="mono">${c.period}</span></div>
+    <p>${c.note}</p>`;
+}
+document.querySelectorAll('.city-dot').forEach(dot=>{
+  dot.addEventListener('click', ()=>selectCity(dot.dataset.i));
+  dot.addEventListener('keydown', (e)=>{ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); selectCity(dot.dataset.i); }});
+});
+
+/* ============================================================
+   RENDER: QUESTIONS
+   ============================================================ */
+const TAGS = ["Personal","Administrative","Technical","Ethics","Mindset"];
+document.getElementById('tagFilter').innerHTML = TAGS.map(t=>`<button class="tag-btn" data-tag="${t}">${t}</button>`).join('');
+let activeTags = new Set();
+let searchTerm = "";
+
+function renderQuestions(){
+  const filtered = QUESTIONS.filter(q=>{
+    const matchesTag = activeTags.size===0 || activeTags.has(q.tag);
+    const matchesSearch = searchTerm==="" || q.text.toLowerCase().includes(searchTerm) || q.tag.toLowerCase().includes(searchTerm);
+    return matchesTag && matchesSearch;
+  });
+  document.getElementById('qCount').textContent = `Showing ${filtered.length} of 75 questions`;
+  const acts = document.getElementById('acts');
+  if(filtered.length===0){
+    acts.innerHTML = `<div class="no-results">No questions match that search. Try a different keyword or clear the tag filters.</div>`;
+    return;
+  }
+  let html = "";
+  for(let a=1; a<=5; a++){
+    const inAct = filtered.filter(q=>q.act===a);
+    if(inAct.length===0) continue;
+    html += `<div class="act-block"><h3><span>${ACT_NAMES[a].split('—')[0].trim()}</span> — ${ACT_NAMES[a].split('—')[1].trim()}</h3><div class="qlist">`;
+    html += inAct.map(q=>`
+      <div class="qrow">
+        <div class="qid mono">Q${q.id}</div>
+        <div class="qtext">${q.text}</div>
+        <div class="qtag t-${q.tag}">${q.tag}</div>
+        <button class="copy-btn" data-text="${q.text.replace(/"/g,'&quot;')}" aria-label="Copy question ${q.id}">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 012-2h10"/></svg>
+        </button>
+      </div>`).join('');
+    html += `</div></div>`;
+  }
+  acts.innerHTML = html;
+  document.querySelectorAll('.copy-btn').forEach(btn=>{
+    btn.addEventListener('click', async ()=>{
+      const text = btn.getAttribute('data-text');
+      try{
+        await navigator.clipboard.writeText(text);
+      }catch(e){
+        const ta=document.createElement('textarea'); ta.value=text; document.body.appendChild(ta); ta.select();
+        document.execCommand('copy'); document.body.removeChild(ta);
+      }
+      btn.classList.add('copied');
+      setTimeout(()=>btn.classList.remove('copied'), 1200);
+    });
+  });
+}
+renderQuestions();
+
+document.getElementById('qSearch').addEventListener('input', (e)=>{
+  searchTerm = e.target.value.toLowerCase().trim();
+  renderQuestions();
+});
+document.querySelectorAll('.tag-btn').forEach(btn=>{
+  btn.addEventListener('click', ()=>{
+    const tag = btn.dataset.tag;
+    if(activeTags.has(tag)){ activeTags.delete(tag); btn.classList.remove('active'); }
+    else { activeTags.add(tag); btn.classList.add('active'); }
+    renderQuestions();
+  });
+});
+
+/* ============================================================
+   RENDER: VAULT
+   ============================================================ */
+document.getElementById('vaultGrid').innerHTML = SOURCES.map(s=>`
+  <a class="vcard" href="${s.url}" target="_blank" rel="noopener noreferrer">
+    <div class="vcard-top"><span class="outlet-badge">${s.outlet}</span><span class="vcard-date mono">${s.date}</span></div>
+    <h4>${s.title}</h4>
+    <p>${s.desc}</p>
+    <div class="vcard-link">Read the source ↗</div>
+  </a>`).join('');
+
+/* ============================================================
+   NAV / PROGRESS / SCROLLSPY
+   ============================================================ */
+const progressFill = document.getElementById('progressFill');
+window.addEventListener('scroll', ()=>{
+  const h = document.documentElement;
+  const scrolled = (h.scrollTop) / (h.scrollHeight - h.clientHeight) * 100;
+  progressFill.style.width = scrolled + '%';
+}, {passive:true});
+
+const navLinks = document.querySelectorAll('.navlink');
+const sections = Array.from(navLinks).map(a=>document.querySelector(a.getAttribute('href')));
+const io = new IntersectionObserver((entries)=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      const id = '#'+entry.target.id;
+      navLinks.forEach(a=>a.classList.toggle('active', a.getAttribute('href')===id));
+    }
+  });
+}, {rootMargin:"-40% 0px -55% 0px"});
+sections.forEach(s=>{ if(s) io.observe(s); });
+
+document.getElementById('navToggle').addEventListener('click', function(){
+  const nav = document.getElementById('chapterNav');
+  const isOpen = nav.style.display === 'block';
+  nav.style.display = isOpen ? 'none' : 'block';
+  if(!isOpen){ nav.style.position='fixed'; nav.style.top='60px'; nav.style.left='0'; nav.style.right='0'; nav.style.background='var(--ink)'; nav.style.zIndex='195'; nav.style.height='auto'; nav.style.borderBottom='1px solid var(--slate-line)'; }
+  this.setAttribute('aria-expanded', String(!isOpen));
+});
+
+/* ============================================================
+   FOCUS MODE
+   ============================================================ */
+const focusToggle = document.getElementById('focusToggle');
+focusToggle.addEventListener('click', ()=>{
+  const on = document.body.classList.toggle('focus-mode');
+  focusToggle.classList.toggle('active', on);
+  focusToggle.setAttribute('aria-pressed', String(on));
+  focusToggle.textContent = on ? 'Exit Focus' : 'Focus Mode';
+});
+
+/* ============================================================
+   EXPORT: MARKDOWN
+   ============================================================ */
+document.getElementById('exportMd').addEventListener('click', ()=>{
+  let md = `# The Uncompromising Civil Servant: Tukaram Mundhe (IAS)\n\n`;
+  md += `Compiled brief for research/production use. Not an official biography.\n\n`;
+  md += `## Executive Summary\n`;
+  md += `- Hometown: Tadsona, Beed (Marathwada)\n- Born: 3 June 1975\n- Batch: IAS 2005, Maharashtra (AIR 20, UPSC CSE 2004)\n- Reported postings: ~25 (range 15–27 depending on source)\n- Current post: Commissioner, Maharashtra FDA (since 15 May 2026)\n- Known as: "Singham IAS"\n\n`;
+  md += `## Chronology\n`;
+  TIMELINE.forEach(t=>{
+    md += `### ${t.period} — ${t.title}\n${t.body.replace(/<[^>]+>/g,'')}\n\n*${t.src}*\n\n`;
+  });
+  md += `## By the Numbers\n`;
+  TALLY.forEach(t=>{ md += `- **${t.n}** ${t.label} — ${t.meta}\n`; });
+  md += `\n## 75 Questions\n`;
+  for(let a=1;a<=5;a++){
+    md += `\n### ${ACT_NAMES[a]}\n`;
+    QUESTIONS.filter(q=>q.act===a).forEach(q=>{ md += `${q.id}. [${q.tag}] ${q.text}\n`; });
+  }
+  md += `\n## Source Vault\n`;
+  SOURCES.forEach(s=>{ md += `- ${s.outlet} (${s.date}) — [${s.title}](${s.url})\n`; });
+  md += `\n---\nCompiled from public reporting current to mid-August 2026. See the in-app Methodology section for sourcing caveats.\n`;
+
+  const blob = new Blob([md], {type:'text/markdown'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url; a.download = 'tukaram-mundhe-dossier.md';
+  document.body.appendChild(a); a.click(); document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+});
+
+document.getElementById('exportPdf').addEventListener('click', ()=>{ window.print(); });
+</script>
 </body>
 </html>
