@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tukaram Mundhe (IAS) — Pre-Interview Production Dossier | Figuring Out</title>
+    <title>Tukaram Mundhe (IAS) — Comprehensive Pre-Production Brief | Figuring Out</title>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -11,8 +11,8 @@
             --surface: #111827;
             --surface-hover: #1F2937;
             --border: #2D3748;
-            --text: #F3F4F6;
-            --muted: #9CA3AF;
+            --text-main: #F3F4F6;
+            --text-muted: #9CA3AF;
             --primary: #3B82F6;
             --accent: #E11D48;
             --amber: #F59E0B;
@@ -22,22 +22,22 @@
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body {
             background-color: var(--bg);
-            color: var(--text);
+            color: var(--text-main);
             font-family: 'Plus Jakarta Sans', sans-serif;
             line-height: 1.7;
-            padding: 36px 18px;
+            padding: 40px 18px;
         }
 
-        .container { max-width: 880px; margin: 0 auto; }
+        .container { max-width: 900px; margin: 0 auto; }
 
-        .tag {
+        .badge {
             display: inline-block;
-            background: rgba(225, 29, 72, 0.15);
-            color: #FB7185;
-            border: 1px solid rgba(225, 29, 72, 0.3);
-            padding: 4px 12px;
+            background: rgba(59, 130, 246, 0.15);
+            color: #60A5FA;
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            padding: 4px 14px;
             border-radius: 999px;
-            font-size: 0.72rem;
+            font-size: 0.75rem;
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 1px;
@@ -48,8 +48,8 @@
             background: var(--surface);
             border: 1px solid var(--border);
             border-radius: 14px;
-            padding: 32px;
-            margin-bottom: 28px;
+            padding: 34px;
+            margin-bottom: 26px;
             position: relative;
         }
 
@@ -57,126 +57,130 @@
             content: "";
             position: absolute;
             top: 0; left: 0; right: 0; height: 4px;
-            background: linear-gradient(90deg, #E11D48, #3B82F6);
+            background: linear-gradient(90deg, #3B82F6, #10B981);
         }
 
-        h1 { font-size: 2.1rem; font-weight: 800; letter-spacing: -0.6px; margin-bottom: 8px; line-height: 1.25; }
-        .subhead { color: var(--muted); font-size: 1rem; margin-bottom: 24px; }
+        h1 { font-size: 2.2rem; font-weight: 800; letter-spacing: -0.6px; margin-bottom: 8px; }
+        .subhead { color: var(--text-muted); font-size: 1rem; margin-bottom: 24px; }
 
-        .stat-strip {
+        .stat-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
-            gap: 14px;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 12px;
             border-top: 1px solid var(--border);
             padding-top: 20px;
         }
 
-        .stat-box { background: rgba(255,255,255,0.02); padding: 12px; border-radius: 8px; }
-        .stat-label { font-size: 0.72rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; }
-        .stat-val { font-size: 0.95rem; font-weight: 700; color: #FFF; margin-top: 3px; }
+        .stat-box { background: rgba(255,255,255,0.02); padding: 12px 14px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.04); }
+        .stat-label { font-size: 0.72rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; }
+        .stat-val { font-size: 0.95rem; font-weight: 700; color: #FFF; margin-top: 2px; }
 
         .card {
             background: var(--surface);
             border: 1px solid var(--border);
             border-radius: 12px;
-            padding: 26px;
-            margin-bottom: 22px;
+            padding: 28px;
+            margin-bottom: 24px;
         }
 
         .card-heading {
-            font-size: 1.15rem;
+            font-size: 1.18rem;
             font-weight: 700;
             margin-bottom: 16px;
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 10px;
             border-bottom: 1px solid var(--border);
-            padding-bottom: 10px;
+            padding-bottom: 12px;
+            color: #FFF;
         }
 
         .story-block {
             background: var(--surface-hover);
-            border-left: 3px solid var(--primary);
-            padding: 16px 18px;
+            border-left: 4px solid var(--primary);
+            padding: 16px 20px;
             border-radius: 0 8px 8px 0;
             margin-bottom: 14px;
         }
 
-        .story-title { font-weight: 700; color: #FFF; font-size: 0.95rem; margin-bottom: 4px; }
-        .story-desc { color: var(--muted); font-size: 0.88rem; line-height: 1.6; }
+        .story-title { font-weight: 700; color: #FFF; font-size: 0.96rem; margin-bottom: 4px; }
+        .story-desc { color: var(--text-muted); font-size: 0.9rem; line-height: 1.65; }
 
-        .question-item {
-            margin-bottom: 18px;
-            padding-bottom: 14px;
-            border-bottom: 1px dashed var(--border);
+        .question-card {
+            background: rgba(255,255,255,0.02);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 18px 20px;
+            margin-bottom: 14px;
         }
-        .question-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
 
-        .q-tag {
-            font-size: 0.72rem;
+        .q-pill {
+            display: inline-block;
+            font-size: 0.7rem;
             font-weight: 700;
             color: var(--amber);
             text-transform: uppercase;
-            margin-bottom: 4px;
-        }
-        .q-text {
-            font-size: 0.95rem;
-            font-weight: 600;
-            color: #FFF;
-            margin-bottom: 4px;
-        }
-        .q-sub {
-            font-size: 0.83rem;
-            color: var(--muted);
+            letter-spacing: 0.5px;
+            margin-bottom: 6px;
         }
 
-        .source-list {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
+        .q-text {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #F9FAFB;
+            margin-bottom: 6px;
+            line-height: 1.55;
+        }
+
+        .q-context {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            line-height: 1.5;
         }
 
         .source-link-card {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background: var(--surface-hover);
-            border: 1px solid var(--border);
-            padding: 14px 18px;
+            background: #1F2937;
+            border: 1px solid #374151;
+            padding: 16px 20px;
             border-radius: 8px;
             text-decoration: none;
-            color: var(--text);
+            color: #FFFFFF;
+            margin-bottom: 12px;
             transition: all 0.2s ease;
         }
 
         .source-link-card:hover {
-            border-color: var(--primary);
+            border-color: #60A5FA;
+            background: #283548;
             transform: translateX(4px);
         }
 
-        .source-title { font-weight: 600; font-size: 0.9rem; color: #FFF; }
-        .source-outlet { font-size: 0.78rem; color: var(--muted); margin-top: 2px; }
-        .source-tag { font-size: 0.75rem; color: var(--primary); font-weight: 700; font-family: 'JetBrains Mono', monospace; }
+        .source-title { font-weight: 700; font-size: 0.92rem; color: #93C5FD; margin-bottom: 2px; }
+        .source-desc { font-size: 0.82rem; color: #D1D5DB; }
+        .source-btn { background: #2563EB; color: #FFF; padding: 6px 14px; border-radius: 6px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; white-space: nowrap; margin-left: 12px; }
 
         .hook-box {
             background: #000;
             border: 1px solid var(--border);
             border-radius: 8px;
-            padding: 16px;
+            padding: 16px 20px;
             margin-bottom: 14px;
             font-family: 'JetBrains Mono', monospace;
-            font-size: 0.84rem;
-            line-height: 1.6;
+            font-size: 0.85rem;
+            line-height: 1.65;
             color: #D1D5DB;
         }
 
         .footer {
             text-align: center;
-            color: var(--muted);
-            font-size: 0.8rem;
-            margin-top: 36px;
+            color: var(--text-muted);
+            font-size: 0.82rem;
+            margin-top: 40px;
             border-top: 1px solid var(--border);
-            padding-top: 18px;
+            padding-top: 20px;
         }
     </style>
 </head>
@@ -184,22 +188,22 @@
 
 <div class="container">
     <div class="hero-card">
-        <span class="tag">Figuring Out • Pre-Interview Dossier</span>
+        <span class="badge">Figuring Out • Pre-Interview Briefing</span>
         <h1>Tukaram Mundhe (IAS)</h1>
-        <p class="subhead">From selling vegetables in Beed to 25+ transfers: The unvarnished reality of Indian governance.</p>
+        <p class="subhead">Origins, Institutional Governance, Ground Reality of Public Administration, and Public Health Audits</p>
 
-        <div class="stat-strip">
+        <div class="stat-grid">
             <div class="stat-box">
-                <div class="stat-label">Hometown</div>
+                <div class="stat-label">Birthplace</div>
                 <div class="stat-val">Tadsonna (Beed, MH)</div>
             </div>
             <div class="stat-box">
-                <div class="stat-label">UPSC Rank</div>
-                <div class="stat-val">AIR 20 (2005 Batch)</div>
+                <div class="stat-label">Education</div>
+                <div class="stat-val">BA (History), MA (Pol Science)</div>
             </div>
             <div class="stat-box">
-                <div class="stat-label">Transfers Faced</div>
-                <div class="stat-val">25+ in ~20 Years</div>
+                <div class="stat-label">UPSC Result</div>
+                <div class="stat-val">AIR 20 (2005 Batch)</div>
             </div>
             <div class="stat-box">
                 <div class="stat-label">Current Role</div>
@@ -208,133 +212,151 @@
         </div>
     </div>
 
-    <!-- SECTION 1: EARLY LIFE -->
+    <!-- SECTION 1: DETAILED BIOGRAPHY -->
     <div class="card">
-        <div class="card-heading">🌱 1. The Early Life: Hardship & Humble Beginnings</div>
+        <div class="card-heading">🌱 1. Biographical Background & Early Hardships</div>
         
         <div class="story-block">
-            <div class="story-title">The Weekly Market Hustle (Tadsonna Village, Beed)</div>
+            <div class="story-title">Farming Roots in Drought-Prone Marathwada</div>
             <div class="story-desc">
-                Born into a farming household in drought-prone Beed. Before walking barefoot to his Marathi-medium Zilla Parishad school, he helped water crops during 2:00 AM power slots and sold farm vegetables in weekly village markets.
-            </div>
-        </div>
-
-        <div class="story-block">
-            <div class="story-title">Failing 3 Times Before AIR 20</div>
-            <div class="story-desc">
-                Studied History and Political Science at BAMU Aurangabad under financial distress. Cleared UPSC 2005 with All India Rank 20 without high-cost coaching networks.
-            </div>
-        </div>
-    </div>
-
-    <!-- SECTION 2: GROUND BATTLES -->
-    <div class="card">
-        <div class="card-heading">⚡ 2. The Ground Battles Behind the Headlines</div>
-
-        <div class="story-block" style="border-left-color: #E11D48;">
-            <div class="story-title">Solapur: Riverbed Sand Mafia & Illicit Distilleries (2008–2010)</div>
-            <div class="story-desc">
-                Raided illegal sand-mining syndicates and illicit liquor networks, facing direct threats and administrative resistance.
-            </div>
-        </div>
-
-        <div class="story-block" style="border-left-color: #F59E0B;">
-            <div class="story-title">Navi Mumbai: 105 Corporators vs. 1 IAS Officer (2016)</div>
-            <div class="story-desc">
-                Cut illegal commercial water lines and audited property tax evasion. After 105 corporators passed a No-Confidence Motion, thousands of citizens protested on the streets to back him.
+                Born in Tadsonna village, Beed district. Raised in a humble agrarian family, he balanced his primary education at the local Zilla Parishad school with field labor—waking up at 2:00 AM to manage irrigation schedules when power was briefly available and selling farm produce in weekly village markets.
             </div>
         </div>
 
         <div class="story-block" style="border-left-color: #10B981;">
-            <div class="story-title">Maharashtra FDA: Food & Pharma Crackdown (2026)</div>
+            <div class="story-title">Academic Pursuit & The UPSC Journey</div>
             <div class="story-desc">
-                Enforced a state-wide ban on fake analogue paneer, conducted surprise audits across kitchen chains, and cancelled licenses of pharma units with contaminated drugs.
+                Inspired by his elder brother (the first graduate from their village), he pursued his BA in History and MA in Political Science from Dr. Babasaheb Ambedkar Marathwada University (BAMU), Aurangabad. Despite multiple initial setbacks across four rigorous exam cycles, he secured All India Rank 20 in UPSC Civil Services Exam 2004.
             </div>
         </div>
     </div>
 
-    <!-- SECTION 3: QUESTION ARC -->
+    <!-- SECTION 2: ADMINISTRATIVE PLAYBOOKS -->
     <div class="card">
-        <div class="card-heading">🎙️ 3. The Unfiltered Question Arc (In Raj's Direct Style)</div>
+        <div class="card-heading">🏛️ 2. Key Administrative Interventions & Ground Impact</div>
 
-        <div class="question-item">
-            <div class="q-tag">Childhood & Hunger</div>
-            <div class="q-text">"You sold vegetables in village markets before school. When you had no money and studied in Marathi-medium, did you honestly believe you could crack UPSC with AIR 20?"</div>
-            <div class="q-sub">Goal: Connect with tier-2/3 Indian youth and demystify civil service preparation.</div>
+        <div class="story-block" style="border-left-color: #E11D48;">
+            <div class="story-title">Solapur & Washim: Natural Resource Audits (2008–2010)</div>
+            <div class="story-desc">
+                Led extensive raids against unauthorized sand mining along riverbeds and dismantled illicit country liquor networks. Prioritized tribal welfare verification and school teacher attendance audits during his tenure as CEO, Zilla Parishad Washim.
+            </div>
         </div>
 
-        <div class="question-item">
-            <div class="q-tag">The Personal Cost of Integrity</div>
-            <div class="q-text">"People make memes about your 25 transfers. But practically—how do you look at your family and tell them to pack their bags every 9 months because you refused to compromise?"</div>
-            <div class="q-sub">Goal: Uncover the emotional, personal, and mental toll of frequent transfers.</div>
+        <div class="story-block" style="border-left-color: #F59E0B;">
+            <div class="story-title">Navi Mumbai (NMMC): Civic Finances & Citizen Governance (2016)</div>
+            <div class="story-desc">
+                Audited property tax evasions, removed commercial encroachments, and initiated the direct "Walk with Commissioner" grievance redressal open house. When 105 corporators passed a No-Confidence Motion, thousands of local residents mobilized peaceful public demonstrations to support his administrative measures.
+            </div>
         </div>
 
-        <div class="question-item">
-            <div class="q-tag">Where Does Public Money Go?</div>
-            <div class="q-text">"Why do Indian roads break every single monsoon? Is it bad engineers, corrupt contractors, or are tenders designed to fail so people can eat repair budgets?"</div>
-            <div class="q-sub">Goal: Break down the actual mechanics of municipal budgets in conversational Hindi.</div>
+        <div class="story-block" style="border-left-color: #3B82F6;">
+            <div class="story-title">Pune (PMPML) & Nagpur: Public Infrastructure & COVID Response</div>
+            <div class="story-desc">
+                Standardized scheduled bus operations in Pune to cut contractor dead mileage. Spearheaded emergency containment infrastructure and medical procurement during early COVID-19 management in Nagpur.
+            </div>
         </div>
 
-        <div class="question-item">
-            <div class="q-tag">Food Adulteration & Public Health</div>
-            <div class="q-text">"During your FDA inspections, what is the scariest thing you caught in the food and medicines everyday Indians consume?"</div>
-            <div class="q-sub">Goal: Immediate high-friction hook relevant to every household.</div>
+        <div class="story-block" style="border-left-color: #10B981;">
+            <div class="story-title">Maharashtra FDA: Food Safety & Pharma Transparency (2026)</div>
+            <div class="story-desc">
+                Enforced statewide prohibitions on adulterated food substitutes (analogue fake paneer), audited kitchen hygiene protocols across commercial restaurants, and cancelled operational licenses for pharma manufacturers failing strict purity benchmarks.
+            </div>
         </div>
     </div>
 
-    <!-- SECTION 4: VERIFIED SOURCES ARCHIVE -->
+    <!-- SECTION 3: EXPANDED & RESPECTFUL QUESTION ARCHITECTURE -->
     <div class="card">
-        <div class="card-heading">📚 4. Verified Sources & Investigative Archive</div>
-        <div class="source-list">
-            <a href="https://www.thehindu.com/news/national/maharashtra/who-is-tukaram-mundhe-the-ias-officer-leading-maharashtras-fda-crackdown/article71349308.ece" target="_blank" class="source-link-card">
-                <div>
-                    <div class="source-title">Who is Tukaram Mundhe, the IAS officer leading Maharashtra's FDA crackdown?</div>
-                    <div class="source-outlet">The Hindu • Career Profile, Early Life & Governance Rules</div>
-                </div>
-                <div class="source-tag">PROFILE ↗</div>
-            </a>
+        <div class="card-heading">🎙️ 3. Comprehensive Question Framework (Curiosity-Led & Conversational)</div>
 
-            <a href="https://www.ndtv.com/topic/tukaram-mundhe" target="_blank" class="source-link-card">
-                <div>
-                    <div class="source-title">FDA Raids, Notices to Endorsers & Food Hygiene Audits</div>
-                    <div class="source-outlet">NDTV • Ground Inspections, Standing Ovations & Policy Statements</div>
-                </div>
-                <div class="source-tag">NEWS DESK ↗</div>
-            </a>
+        <div class="question-card">
+            <span class="q-pill">Theme 1 • The Realities of Civil Services Preparation</span>
+            <div class="q-text">"You studied in a village Zilla Parishad school and had to manage farming alongside your studies. For millions of students in small towns preparing for UPSC without expensive coaching, what is the single biggest mindset shift needed to compete at the national level?"</div>
+            <div class="q-context">Context: Explores practical discipline, regional-medium challenges, and overcoming early socioeconomic hurdles.</div>
+        </div>
 
-            <a href="https://indianexpress.com/article/cities/mumbai/ias-officer-tukaram-mundhe-transferred-within-2-months-8296982/" target="_blank" class="source-link-card">
-                <div>
-                    <div class="source-title">Administrative Transfers & Departmental Friction Patterns</div>
-                    <div class="source-outlet">The Indian Express • Bureaucratic Rejig & NHM Tenure</div>
-                </div>
-                <div class="source-tag">REPORT ↗</div>
-            </a>
+        <div class="question-card">
+            <span class="q-pill">Theme 2 • The Gap Between Ideals and Ground Reality</span>
+            <div class="q-text">"When someone clears the exam, they enter the service with an ideal image of public administration. What is the biggest shock or adjustment an officer faces on their very first district posting?"</div>
+            <div class="q-context">Context: Breaks down the real-world operational complexities of handling ground bureaucracy, staff constraints, and local friction.</div>
+        </div>
 
-            <a href="https://www.jansatta.com/trending-news/tukaram-mundhe-nakli-paneer-hotel-fda-maharashtra/4668229/" target="_blank" class="source-link-card">
-                <div>
-                    <div class="source-title">Maharashtra Analogue Paneer Ban & 24-Hour Notice Audits</div>
-                    <div class="source-outlet">Jansatta • Ground Action, Inspection Protocol & Citizen Impact</div>
-                </div>
-                <div class="source-tag">INVESTIGATION ↗</div>
-            </a>
+        <div class="question-card">
+            <span class="q-pill">Theme 3 • The Anatomy of City Finances & Infrastructure</span>
+            <div class="q-text">"Every taxpayer wonders why public infrastructure like roads, clean water, or transport often faces execution bottlenecks across Indian cities. Having managed municipal corporations, where does the real challenge lie—budgets, planning, or accountability?"</div>
+            <div class="q-context">Context: Discusses municipal revenue models, tender accountability, and how cities can become self-sustaining.</div>
+        </div>
+
+        <div class="question-card">
+            <span class="q-pill">Theme 4 • The Personal Demands of Public Integrity</span>
+            <div class="q-text">"Your career has involved frequent relocations across different departments and districts. What kind of resilience and personal sacrifices does that require from you and your family behind the scenes?"</div>
+            <div class="q-context">Context: Explores the human, emotional, and psychological side of uncompromising administrative duty.</div>
+        </div>
+
+        <div class="question-card">
+            <span class="q-pill">Theme 5 • Public Health & What Everyday Indians Consume</span>
+            <div class="q-text">"With the recent FDA crackdowns on fake analogue paneer and adulterated products, what should everyday Indian families look out for to ensure the food and medicines they buy are safe?"</div>
+            <div class="q-context">Context: Practical, actionable health insights that directly benefit the everyday viewer.</div>
         </div>
     </div>
 
-    <!-- SECTION 5: SHORT-FORM REEL HOOKS -->
+    <!-- SECTION 4: VERIFIED SOURCES & MEDIA ARCHIVE -->
+    <div class="card" style="border: 1px solid #3B82F6;">
+        <div class="card-heading" style="color: #60A5FA;">
+            📚 4. Verified Sources & Investigative Archive
+        </div>
+        <p style="color: var(--text-muted); font-size: 0.88rem; margin-bottom: 18px;">
+            Primary national reports, career profiles, and official investigative documentation:
+        </p>
+
+        <a href="https://www.thehindu.com/news/national/maharashtra/who-is-tukaram-mundhe-the-ias-officer-leading-maharashtras-fda-crackdown/article71349308.ece" target="_blank" rel="noopener noreferrer" class="source-link-card">
+            <div>
+                <div class="source-title">The Hindu • Profile & FDA Crackdown</div>
+                <div class="source-desc">Detailed background on childhood in Beed, academic journey, and regulatory reforms.</div>
+            </div>
+            <div class="source-btn">Open Article ↗</div>
+        </a>
+
+        <a href="https://timesofindia.indiatimes.com/life-style/people/meet-tukaram-mundhe-from-a-farmers-son-in-maharashtras-drought-hit-beed-to-one-of-indias-most-recognisable-ias-officers/articleshow/133155979.cms" target="_blank" rel="noopener noreferrer" class="source-link-card">
+            <div>
+                <div class="source-title">Times of India • Biographical Feature</div>
+                <div class="source-desc">Covering his early life, family background, and administrative philosophy.</div>
+            </div>
+            <div class="source-btn">Open Article ↗</div>
+        </a>
+
+        <a href="https://www.jansatta.com/trending-news/tukaram-mundhe-nakli-paneer-hotel-fda-maharashtra/4668229/" target="_blank" rel="noopener noreferrer" class="source-link-card">
+            <div>
+                <div class="source-title">Jansatta • Ground Investigation</div>
+                <div class="source-desc">Statewide inspections against analogue food substitutes and restaurant compliance audits.</div>
+            </div>
+            <div class="source-btn">Open Article ↗</div>
+        </a>
+
+        <a href="https://indianexpress.com/article/cities/mumbai/ias-officer-tukaram-mundhe-transferred-within-2-months-8296982/" target="_blank" rel="noopener noreferrer" class="source-link-card">
+            <div>
+                <div class="source-title">The Indian Express • Administrative Analysis</div>
+                <div class="source-desc">Documented review of departmental tenures and institutional frameworks.</div>
+            </div>
+            <div class="source-btn">Open Article ↗</div>
+        </a>
+    </div>
+
+    <!-- SECTION 5: READY-TO-RECORD SHORT HOOKS -->
     <div class="card">
-        <div class="card-heading">🎬 5. Ready-to-Record Short-Form Hooks (For Editors)</div>
+        <div class="card-heading">🎬 5. Ready-to-Record Short-Form Hook Concepts</div>
 
         <div class="hook-box">
-[HOOK 1 - The 105 vs 1 Moment]
-Visual: Raj leaning in with intense expression.
-Raj: "When 105 politicians united to kick you out of Navi Mumbai, were you ever afraid for your life?"
-Mundhe: "If you work for the chair, you stay afraid. If you work for the Constitution, you sleep peacefully."
+[HOOK 1 - The Reality of Civic Infrastructure]
+Visual: Direct studio angle, dynamic subtitles.
+Raj: "Why do city roads and drainage systems often need repeated repairs right after monsoon?"
+Mundhe: "Because long-term infrastructure requires end-to-end accountability in maintenance contracts and regular auditing before tenders are cleared."
         </div>
 
         <div class="hook-box">
-[HOOK 2 - The Fake Food Warning]
-Raj: "How do people know if the paneer or ghee they order outside is real or chemical imitation?"
-Mundhe: "That is why we banned analogue cheese across all restaurants. When business cuts cost at the price of public health, the state must step in."
+[HOOK 2 - The Food Safety Warning]
+Visual: Split screen with inspection footage headlines.
+Raj: "What is the biggest thing ordinary citizens should look out for regarding food adulteration?"
+Mundhe: "Always look for transparent labeling. When synthetic fats replace real dairy under the guise of imitation cheese, consumers have a legal right to know what they are paying for."
         </div>
     </div>
 
