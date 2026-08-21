@@ -3,428 +3,445 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tukaram Mundhe (IAS) | Executive Production Blueprint</title>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+    <title>Tukaram Mundhe (IAS) | Pre-Production Intelligence & Story Arc</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg: #07090E;
-            --surface: #0E131F;
-            --surface-elevated: #151C2C;
-            --border: #1F293D;
-            --border-highlight: #2E3E5C;
+            --bg-canvas: #06080D;
+            --surface-panel: #0E131F;
+            --surface-card: #151D2E;
+            --border-subtle: #222F46;
+            --border-glow: #3B82F6;
             --text-primary: #F8FAFC;
             --text-secondary: #94A3B8;
-            --text-muted: #64748B;
-            --accent-red: #EF4444;
-            --accent-blue: #38BDF8;
+            --accent-crimson: #EF4444;
             --accent-amber: #F59E0B;
             --accent-emerald: #10B981;
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
+        
         body {
-            background-color: var(--bg);
+            background-color: var(--bg-canvas);
             color: var(--text-primary);
-            font-family: 'Inter', sans-serif;
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
             line-height: 1.6;
-            padding: 40px 20px;
+            padding: 32px 16px 80px 16px;
         }
 
-        .container { max-width: 960px; margin: 0 auto; }
-
-        /* HEADER & HERO */
-        .badge-bar {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-bottom: 16px;
-        }
-        .badge {
-            background: rgba(239, 68, 68, 0.12);
-            color: #F87171;
-            border: 1px solid rgba(239, 68, 68, 0.3);
-            padding: 4px 12px;
-            border-radius: 999px;
-            font-size: 0.72rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-family: 'Space Grotesk', sans-serif;
-        }
-        .confidential {
-            color: var(--text-muted);
-            font-size: 0.75rem;
-            font-family: 'JetBrains Mono', monospace;
+        .container {
+            max-width: 920px;
+            margin: 0 auto;
         }
 
-        .hero-banner {
-            background: linear-gradient(180deg, var(--surface) 0%, rgba(14, 19, 31, 0.6) 100%);
-            border: 1px solid var(--border);
-            border-radius: 16px;
-            padding: 36px;
-            position: relative;
-            overflow: hidden;
-            margin-bottom: 32px;
-        }
-        .hero-banner::after {
-            content: "";
-            position: absolute;
-            top: 0; left: 0; right: 0; height: 3px;
-            background: linear-gradient(90deg, var(--accent-red), var(--accent-amber), var(--accent-blue));
-        }
-
-        h1 {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 2.5rem;
-            font-weight: 700;
-            letter-spacing: -1px;
-            line-height: 1.15;
-            margin-bottom: 12px;
-        }
-        .hero-sub {
-            color: var(--text-secondary);
-            font-size: 1.05rem;
-            max-width: 780px;
-            margin-bottom: 28px;
-        }
-
-        /* METRIC CARDS */
-        .metric-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 16px;
-            border-top: 1px solid var(--border);
-            padding-top: 24px;
-        }
-        .metric-card {
-            background: var(--surface-elevated);
-            border: 1px solid var(--border);
-            border-radius: 10px;
-            padding: 16px;
-        }
-        .metric-label {
-            font-size: 0.72rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            color: var(--text-muted);
-            font-family: 'Space Grotesk', sans-serif;
-        }
-        .metric-value {
-            font-size: 1.25rem;
-            font-weight: 700;
-            color: #FFF;
-            font-family: 'Space Grotesk', sans-serif;
-            margin-top: 4px;
-        }
-
-        /* TAB NAVIGATION */
-        .tab-nav {
-            display: flex;
-            gap: 10px;
-            margin-bottom: 24px;
-            border-bottom: 1px solid var(--border);
-            padding-bottom: 12px;
-            overflow-x: auto;
-        }
-        .tab-btn {
-            background: transparent;
-            border: 1px solid transparent;
-            color: var(--text-secondary);
-            padding: 10px 18px;
-            border-radius: 8px;
-            font-size: 0.88rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            font-family: 'Space Grotesk', sans-serif;
-            white-space: nowrap;
-        }
-        .tab-btn.active {
-            background: var(--surface-elevated);
-            color: #FFF;
-            border-color: var(--border-highlight);
-        }
-        .tab-btn:hover:not(.active) {
-            color: #FFF;
-            background: rgba(255,255,255,0.03);
-        }
-
-        .tab-content { display: none; }
-        .tab-content.active { display: block; animation: fadeIn 0.3s ease; }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(6px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        /* CONTENT CARDS */
-        .content-card {
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: 14px;
-            padding: 28px;
-            margin-bottom: 20px;
-        }
-        .section-title {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 1.2rem;
-            font-weight: 700;
-            margin-bottom: 16px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        /* TIMELINE COMPONENT */
-        .timeline { position: relative; padding-left: 20px; border-left: 2px solid var(--border); }
-        .timeline-node {
-            position: relative;
-            margin-bottom: 28px;
-            padding-left: 20px;
-        }
-        .timeline-node::before {
-            content: "";
-            position: absolute;
-            left: -27px;
-            top: 4px;
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background: var(--accent-red);
-            border: 2px solid var(--bg);
-        }
-        .node-year {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.75rem;
-            color: var(--accent-amber);
-            font-weight: 700;
-        }
-        .node-title {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 1.05rem;
-            font-weight: 700;
-            color: #FFF;
-            margin-top: 2px;
-        }
-        .node-desc {
-            font-size: 0.88rem;
-            color: var(--text-secondary);
-            margin-top: 4px;
-        }
-
-        /* QUESTION CARDS */
-        .q-box {
-            background: var(--surface-elevated);
-            border: 1px solid var(--border);
-            border-radius: 10px;
-            padding: 20px;
-            margin-bottom: 14px;
-        }
-        .q-meta {
+        /* Top Nav & Breadcrumb */
+        .top-nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 8px;
-        }
-        .q-tag {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.72rem;
-            color: var(--accent-blue);
-            text-transform: uppercase;
-        }
-        .q-text {
-            font-size: 0.98rem;
-            font-weight: 600;
-            color: #FFF;
-            line-height: 1.5;
-            margin-bottom: 8px;
-        }
-        .q-intent {
-            font-size: 0.82rem;
-            color: var(--text-muted);
-            border-top: 1px dashed var(--border);
-            padding-top: 8px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid var(--border-subtle);
+            margin-bottom: 32px;
         }
 
-        /* VIRAL HOOK BOX */
-        .hook-card {
-            background: #000;
-            border: 1px solid var(--border-highlight);
-            border-radius: 10px;
-            padding: 20px;
-            margin-bottom: 16px;
+        .brand-badge {
             font-family: 'JetBrains Mono', monospace;
-            font-size: 0.84rem;
+            font-size: 0.78rem;
+            color: var(--text-secondary);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .live-dot {
+            width: 8px;
+            height: 8px;
+            background-color: var(--accent-crimson);
+            border-radius: 50%;
+            display: inline-block;
+            box-shadow: 0 0 10px var(--accent-crimson);
+        }
+
+        /* Editorial Hero */
+        .hero {
+            background: linear-gradient(180deg, var(--surface-panel) 0%, rgba(14, 19, 31, 0.4) 100%);
+            border: 1px solid var(--border-subtle);
+            border-radius: 16px;
+            padding: 40px 32px;
+            margin-bottom: 32px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .kicker {
+            font-family: 'JetBrains Mono', monospace;
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            letter-spacing: 1.5px;
+            color: var(--accent-amber);
+            margin-bottom: 12px;
+        }
+
+        h1 {
+            font-family: 'Instrument Serif', Georgia, serif;
+            font-size: 3.4rem;
+            line-height: 1.1;
+            font-weight: 400;
+            color: #FFFFFF;
+            margin-bottom: 14px;
+            letter-spacing: -0.5px;
+        }
+
+        .hero-desc {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            max-width: 720px;
+            line-height: 1.7;
+            margin-bottom: 28px;
+        }
+
+        /* Fast Data Bar */
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+            gap: 16px;
+            padding-top: 24px;
+            border-top: 1px solid var(--border-subtle);
+        }
+
+        .metric-cell {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            border-radius: 8px;
+            padding: 12px 16px;
+        }
+
+        .metric-label {
+            font-size: 0.72rem;
+            font-family: 'JetBrains Mono', monospace;
+            text-transform: uppercase;
+            color: var(--text-secondary);
+        }
+
+        .metric-val {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: #FFF;
+            margin-top: 4px;
+        }
+
+        /* Interactive Filter Tabs */
+        .tab-bar {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 24px;
+            overflow-x: auto;
+            padding-bottom: 4px;
+        }
+
+        .tab-btn {
+            background: var(--surface-panel);
+            color: var(--text-secondary);
+            border: 1px solid var(--border-subtle);
+            padding: 10px 18px;
+            border-radius: 999px;
+            font-size: 0.86rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            white-space: nowrap;
+        }
+
+        .tab-btn.active, .tab-btn:hover {
+            background: #FFFFFF;
+            color: #000000;
+            border-color: #FFFFFF;
+        }
+
+        /* Content Modules */
+        .module { display: none; }
+        .module.active { display: block; }
+
+        .card {
+            background: var(--surface-panel);
+            border: 1px solid var(--border-subtle);
+            border-radius: 12px;
+            padding: 28px;
+            margin-bottom: 20px;
+        }
+
+        .card-header {
+            font-size: 1.15rem;
+            font-weight: 700;
+            margin-bottom: 18px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Story Feed */
+        .story-node {
+            padding: 18px;
+            background: var(--surface-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: 10px;
+            margin-bottom: 14px;
+        }
+
+        .story-meta {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
+            color: var(--accent-amber);
+            margin-bottom: 6px;
+            font-weight: 600;
+        }
+
+        .story-headline {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: #FFF;
+            margin-bottom: 6px;
+        }
+
+        .story-text {
+            color: var(--text-secondary);
+            font-size: 0.92rem;
             line-height: 1.6;
         }
-        .hook-title { color: var(--accent-emerald); font-weight: 700; margin-bottom: 8px; }
 
-        .footer-note {
-            text-align: center;
-            padding-top: 28px;
-            border-top: 1px solid var(--border);
-            color: var(--text-muted);
-            font-size: 0.8rem;
+        /* Direct Question Cards (Raj Style) */
+        .q-card {
+            background: var(--surface-card);
+            border-left: 3px solid var(--accent-crimson);
+            padding: 20px;
+            border-radius: 0 10px 10px 0;
+            margin-bottom: 16px;
+        }
+
+        .q-theme {
             font-family: 'JetBrains Mono', monospace;
+            font-size: 0.72rem;
+            text-transform: uppercase;
+            color: var(--accent-crimson);
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+
+        .q-prompt {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: #FFFFFF;
+            margin-bottom: 8px;
+            line-height: 1.5;
+        }
+
+        .q-reason {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        /* Interactive Script Box */
+        .script-box {
+            background: #000000;
+            border: 1px solid var(--border-subtle);
+            border-radius: 10px;
+            padding: 20px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85rem;
+            line-height: 1.65;
+            color: #D1D5DB;
+            margin-bottom: 16px;
+        }
+
+        .script-tag {
+            color: var(--accent-amber);
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+
+        .footer {
+            margin-top: 60px;
+            padding-top: 24px;
+            border-top: 1px solid var(--border-subtle);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: var(--text-secondary);
+            font-size: 0.82rem;
         }
     </style>
 </head>
 <body>
 
 <div class="container">
-    
-    <div class="badge-bar">
-        <span class="badge">Figuring Out • Pre-Interview Brief</span>
-        <span class="confidential">SYSTEM ID: TM-IAS-2026</span>
+    <!-- Top Nav -->
+    <div class="top-nav">
+        <div class="brand-badge">
+            <span class="live-dot"></span> FIGURING OUT • RESEARCH SUITE
+        </div>
+        <div class="brand-badge">
+            PREPARED BY: SHRADDHA JAMDADE
+        </div>
     </div>
 
-    <div class="hero-banner">
+    <!-- Editorial Hero Header -->
+    <div class="hero">
+        <div class="kicker">Guest Intelligence Dossier</div>
         <h1>Tukaram Mundhe (IAS)</h1>
-        <p class="hero-sub">From a moneylender-debt farm in Beed to 25+ transfers: The unvarnished reality of Indian governance, administrative friction, and the psychology of uncompromising execution.</p>
+        <p class="hero-desc">
+            Moving beyond the viral headline of 25+ transfers. An investigative breakdown of rural hardship in Beed, systemic municipal friction, and unscripted conversation angles.
+        </p>
 
-        <div class="metric-grid">
-            <div class="metric-card">
-                <div class="metric-label">Origins</div>
-                <div class="metric-value">Tadsonna (Beed)</div>
+        <div class="metrics-grid">
+            <div class="metric-cell">
+                <div class="metric-label">Roots</div>
+                <div class="metric-val">Tadsonna (Beed, MH)</div>
             </div>
-            <div class="metric-card">
-                <div class="metric-label">UPSC Merit</div>
-                <div class="metric-value">AIR 20 (2005)</div>
+            <div class="metric-cell">
+                <div class="metric-label">UPSC Journey</div>
+                <div class="metric-val">AIR 20 (After 3 Rejections)</div>
             </div>
-            <div class="metric-card">
-                <div class="metric-label">Official Transfers</div>
-                <div class="metric-value">25+ in ~20 Yrs</div>
-            </div>
-            <div class="metric-card">
-                <div class="metric-label">Core Theme</div>
-                <div class="metric-value">Public Execution</div>
+            <div class="metric-cell">
+                <div class="metric-label">Friction Benchmark</div>
+                <div class="metric-val">105–0 No-Confidence Vote</div>
             </div>
         </div>
     </div>
 
-    <!-- TABS NAVIGATION -->
-    <div class="tab-nav">
-        <button class="tab-btn active" onclick="switchTab('origin')">🌱 The Origin & Hardship</button>
-        <button class="tab-btn" onclick="switchTab('playbooks')">⚡ Ground Battles & Numbers</button>
-        <button class="tab-btn" onclick="switchTab('questions')">🎙️ Raj's Episode Blueprint</button>
-        <button class="tab-btn" onclick="switchTab('hooks')">🎬 Viral Hook Scripts</button>
+    <!-- Interactive Navigation Tabs -->
+    <div class="tab-bar">
+        <button class="tab-btn active" onclick="switchTab('origin')">1. The Origin Story</button>
+        <button class="tab-btn" onclick="switchTab('ground')">2. Ground Realities</button>
+        <button class="tab-btn" onclick="switchTab('interview')">3. Unvarnished Interview Arc</button>
+        <button class="tab-btn" onclick="switchTab('reels')">4. Ready-to-Record Clips</button>
     </div>
 
-    <!-- TAB 1: ORIGIN -->
-    <div id="origin" class="tab-content active">
-        <div class="content-card">
-            <div class="section-title">🌾 What Nobody Talks About: The Early Years</div>
-            <div class="timeline">
-                <div class="timeline-node">
-                    <div class="node-year">1980s - 1990s • BEED DISTRICT</div>
-                    <div class="node-title">The Moneylender Debt & Weekly Markets</div>
-                    <div class="node-desc">Born in Tadsonna, Beed. His family was heavily trapped in village moneylender (sawkar) debt. Tukaram and his brother worked in the dry fields before school and sold vegetables in weekly markets (athavadi bazaar) to cover basic schooling fees.</div>
-                </div>
+    <!-- TAB 1: THE ORIGIN STORY -->
+    <div id="origin" class="module active">
+        <div class="card">
+            <div class="card-header">
+                <span>The Unreported Early Hardship</span>
+            </div>
 
-                <div class="timeline-node">
-                    <div class="node-year">2001 - 2004 • THE EXAM STRUGGLE</div>
-                    <div class="node-title">Failing 3 Times While Working as a Lecturer</div>
-                    <div class="node-desc">Studied History in Aurangabad (BAMU). Failed Prelims on his 1st attempt, failed Mains on his 2nd, and reached the interview on his 3rd. While waiting, he cleared MPSC (Sales Tax Inspector) and lectured in Jalgaon to survive financially before cracking UPSC with AIR 20 in 2005.</div>
+            <div class="story-node">
+                <div class="story-meta">1985–1995 • DROUGHT-PRONE BEED</div>
+                <div class="story-headline">Selling Vegetables in Weekly Markets Before School</div>
+                <div class="story-text">
+                    Born to small-scale farmers Haribhau and Aasrabai Mundhe in Tadsonna village. Due to erratic irrigation power supply, he tended crops late at night and sold fresh farm produce at local weekly markets (*Athavadi Bazaar*) before walking to his Marathi-medium Zilla Parishad school.
+                </div>
+            </div>
+
+            <div class="story-node">
+                <div class="story-meta">2001–2005 • AURANGABAD (BAMU)</div>
+                <div class="story-headline">Failing Three Consecutive UPSC Attempts</div>
+                <div class="story-text">
+                    Studied history and political science on tight family loans. Failed Prelims on his 1st attempt, failed Mains on his 2nd, and was rejected in the interview stage on his 3rd. Secured All India Rank 20 in his final attempt without corporate coaching or elite pedigree.
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- TAB 2: PLAYBOOKS & DATA -->
-    <div id="playbooks" class="tab-content">
-        <div class="content-card">
-            <div class="section-title">📊 Ground Battles: Beyond the "Transfers" Headline</div>
-            
-            <div class="q-box" style="border-left: 3px solid var(--accent-red);">
-                <div class="q-meta">
-                    <span class="q-tag">2008 • Nagpur Zilla Parishad</span>
-                </div>
-                <div class="q-text">The Day-1 Doctor & Teacher Mass Suspension</div>
-                <div class="q-intent">On his first day as CEO, Mundhe made unannounced early-morning raids across ZP schools and rural health clinics. He suspended teachers and doctors for chronic absenteeism—dropping unnotified staff absenteeism from 12% to under 2% overnight.</div>
+    <!-- TAB 2: GROUND REALITIES & CONTROVERSIES -->
+    <div id="ground" class="module">
+        <div class="card">
+            <div class="card-header">
+                <span>The Ground Battles (Beyond the Headlines)</span>
             </div>
 
-            <div class="q-box" style="border-left: 3px solid var(--accent-amber);">
-                <div class="q-meta">
-                    <span class="q-tag">2012 • Solapur District</span>
+            <div class="story-node">
+                <div class="story-meta">NAVI MUMBAI (NMMC) • 2016</div>
+                <div class="story-headline">The 105–0 No-Confidence Vote vs. Mass Citizen Protests</div>
+                <div class="story-text">
+                    Audited unbilled commercial water taps and cleared illegal encroachments across public walkways. 105 out of 111 corporators across party lines voted to remove him. Thousands of Navi Mumbai residents staged spontaneous street protests to block his removal.
                 </div>
-                <div class="q-text">Sales Tax Miracle: ₹143 Cr to ₹500+ Cr</div>
-                <div class="q-intent">Audited unrecorded ledger transactions and cracked down on illegal sand extraction rings on riverbeds, scaling public revenue by more than 300% without new taxes.</div>
             </div>
 
-            <div class="q-box" style="border-left: 3px solid var(--accent-emerald);">
-                <div class="q-meta">
-                    <span class="q-tag">2016 • Navi Mumbai (NMMC)</span>
+            <div class="story-node">
+                <div class="story-meta">PUNE (PMPML) • 2017</div>
+                <div class="story-headline">5:00 AM Unannounced Bus Depot Audits</div>
+                <div class="story-text">
+                    Personally audited depot dispatch points at dawn to track revenue leakages and fuel theft, cutting dead mileage across the city's bus network within months.
                 </div>
-                <div class="q-text">105 Corporators vs. 1 IAS Officer</div>
-                <div class="q-intent">Cancelled illicit contractor tenders and cut unauthorized commercial water supplies. 105 out of 111 corporators passed a No-Confidence Motion to oust him, sparking spontaneous mass public street protests in his defense.</div>
+            </div>
+
+            <div class="story-node">
+                <div class="story-meta">FOOD & DRUG ADMINISTRATION (FDA) • RECENT</div>
+                <div class="story-headline">The Fake Paneer & Counterfeit Medicine Raids</div>
+                <div class="story-text">
+                    Enforced statewide raids against luxury dining spots and local manufacturers selling vegetable oil-based analog cheese as pure dairy paneer, alongside tracking spurious pharmaceutical supply routes.
+                </div>
             </div>
         </div>
     </div>
 
-    <!-- TAB 3: QUESTIONS -->
-    <div id="questions" class="tab-content">
-        <div class="content-card">
-            <div class="section-title">🎙️ Raj Shamani's Grounded Episode Arc</div>
-
-            <div class="q-box">
-                <div class="q-meta">
-                    <span class="q-tag">Segment 1 • Hunger & Reality</span>
-                    <span style="color: var(--accent-amber); font-size: 0.75rem;">15 MINS</span>
-                </div>
-                <div class="q-text">"You used to sell vegetables in the village bazaar before school to help pay off moneylenders. When you had zero connections and Marathi-medium schooling, what made you think you could clear UPSC AIR 20?"</div>
-                <div class="q-intent">Core Angle: Destroys elite civil services stereotypes; directly connects with tier-2/3 Indian youth.</div>
+    <!-- TAB 3: THE INTERVIEW QUESTIONS -->
+    <div id="interview" class="module">
+        <div class="card">
+            <div class="card-header">
+                <span>The 4 Direct Question Angles (Raj Shamani Style)</span>
             </div>
 
-            <div class="q-box">
-                <div class="q-meta">
-                    <span class="q-tag">Segment 2 • The Family Toll</span>
-                    <span style="color: var(--accent-red); font-size: 0.75rem;">20 MINS</span>
-                </div>
-                <div class="q-text">"People see '25 transfers' as a hero badge on Twitter. But practically—how do you look at your wife and children and tell them to pack up their schools and life every 9 months because you refused to look away?"</div>
-                <div class="q-intent">Core Angle: Breaks the rigid bureaucrat shield to expose the real emotional sacrifice.</div>
+            <div class="q-card">
+                <div class="q-theme">The Hunger & Rejection Phase</div>
+                <div class="q-prompt">"You used to sell vegetables in the village market before going to school. When you failed UPSC three times while your family was in debt, did you ever feel like quitting and taking a normal job?"</div>
+                <div class="q-reason">Connects with youth facing career uncertainty; removes bureaucratic distance.</div>
             </div>
 
-            <div class="q-box">
-                <div class="q-meta">
-                    <span class="q-tag">Segment 3 • The Food Safety Reality</span>
-                    <span style="color: var(--accent-emerald); font-size: 0.75rem;">25 MINS</span>
-                </div>
-                <div class="q-text">"During your FDA crackdowns, you raided major food chains and local manufacturers. What is the single scariest thing you caught in the milk, paneer, and everyday food average Indians consume?"</div>
-                <div class="q-intent">Core Angle: High-velocity consumer topic with universal relevance.</div>
-            </div>
-        </div>
-    </div>
-
-    <!-- TAB 4: VIRAL HOOKS -->
-    <div id="hooks" class="tab-content">
-        <div class="content-card">
-            <div class="section-title">🎬 Ready-to-Record Short-Form Hooks</div>
-
-            <div class="hook-card">
-                <div class="hook-title">// HOOK 01: THE 105 VS 1 VOTE</div>
-                [0:00 - 0:03] Tight Zoom on Host.<br>
-                Raj: "When 105 politicians united to kick you out of Navi Mumbai, were you ever scared for your life?"<br>
-                Mundhe: "If you work for the chair, you stay afraid. If you work for the Constitution, you sleep peacefully."
+            <div class="q-card" style="border-left-color: var(--accent-amber);">
+                <div class="q-theme">The Personal Cost of Honest Governance</div>
+                <div class="q-prompt">"People post reels about your 25 transfers like it's a superhero movie. But what does it feel like to pack your family's bags every 8 to 10 months because you refused to look the other way?"</div>
+                <div class="q-reason">Highlights the human and psychological reality of civil service integrity.</div>
             </div>
 
-            <div class="hook-card">
-                <div class="hook-title">// HOOK 02: THE ROAD REPAIR TRUTH</div>
-                [0:00 - 0:03] Split Screen with Pothole/Monsoon B-Roll.<br>
-                Raj: "Why do Indian roads break every single monsoon after paying thousands in road tax?"<br>
-                Mundhe: "Because road contracts are rarely engineered for durability. They are structured for recurring repair budgets."
+            <div class="q-card" style="border-left-color: var(--accent-emerald);">
+                <div class="q-theme">Taxpayer Money & Broken Roads</div>
+                <div class="q-prompt">"Why do Indian roads break every single monsoon? Is it bad engineering, corrupt contractors, or are tenders designed to fail so people can make money on recurring repairs?"</div>
+                <div class="q-reason">A practical civic question every taxpayer relates to directly.</div>
+            </div>
+
+            <div class="q-card">
+                <div class="q-theme">Food Adulteration & Health</div>
+                <div class="q-prompt">"During your FDA inspections, what was the most alarming thing you found in the food and medicines ordinary Indians consume daily?"</div>
+                <div class="q-reason">High-friction, practical topic with immediate viewer relevance.</div>
             </div>
         </div>
     </div>
 
-    <div class="footer-note">
-        ENGINEERED BY SHRADDHA JAMDADE • FIGURING OUT RESEARCH INTELLIGENCE
+    <!-- TAB 4: SHORT-FORM SCRIPTS -->
+    <div id="reels" class="module">
+        <div class="card">
+            <div class="card-header">
+                <span>Ready-to-Shoot Viral Hooks (Reels / Shorts)</span>
+            </div>
+
+            <div class="script-box">
+                <div class="script-tag">[HOOK 1 — The 105 vs 1 Moment]</div>
+                Visual: Tight crop on Raj leaning in.<br>
+                <b>Raj:</b> "When 105 politicians united to kick you out of Navi Mumbai, were you ever afraid for your life?"<br>
+                <b>Mundhe:</b> "If you work for the chair, you stay afraid. If you work for the Constitution, you sleep peacefully."
+            </div>
+
+            <div class="script-box">
+                <div class="script-tag">[HOOK 2 — The Road Tender Loophole]</div>
+                Visual: Split screen with archive footage of monsoon roads.<br>
+                <b>Raj:</b> "Why does our infrastructure break down so fast after paying taxes?"<br>
+                <b>Mundhe:</b> "Because road contracts are rarely designed for longevity. They are designed for recurring maintenance budgets."
+            </div>
+        </div>
     </div>
 
+    <!-- Footer Note -->
+    <div class="footer">
+        <div>Researched & Engineered by Shraddha Jamdade</div>
+        <div>Built for Figuring Out / House of X Media Team</div>
+    </div>
 </div>
 
 <script>
     function switchTab(tabId) {
-        document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+        document.querySelectorAll('.module').forEach(el => el.classList.remove('active'));
         document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
         
         document.getElementById(tabId).classList.add('active');
